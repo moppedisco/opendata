@@ -1,0 +1,15 @@
+.Header {
+    position: relative;
+    top: 0;
+    z-index: 1;
+    background: $white;
+    margin-bottom: 3rem;
+
+    .Header--inner {
+        @include sitewidth;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

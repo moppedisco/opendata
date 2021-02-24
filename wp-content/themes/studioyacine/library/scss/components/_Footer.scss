@@ -1,0 +1,7 @@
+.Footer {
+    padding: 2rem 0;
+
+    .Footer--inner {
+        @include sitewidth;
+    }
+}
