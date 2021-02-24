@@ -83,13 +83,13 @@ function post_event()
 			'query_var' => true,
 			'menu_position' => 5, /* this is what order you want it to appear in on the left hand side menu */
 			'menu_icon' => get_stylesheet_directory_uri() . '/library/images/custom-post-icon.png', /* the icon for the custom post type menu */
-			'rewrite'	=> array('slug' => 'Event', 'with_front' => false), /* you can specify its url slug */
-			'has_archive' => 'Event', /* you can rename the slug here */
+			'rewrite'	=> array('slug' => 'events', 'with_front' => false), /* you can specify its url slug */
+			'has_archive' => 'events', /* you can rename the slug here */
 			'capability_type' => 'post',
 			'hierarchical' => false,
 			'show_in_rest' => true,
 			/* the next one is important, it tells what's enabled in the post editor */
-			'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt', 'custom-fields', 'revisions')
+			'supports' => array('title', 'editor', 'author', 'thumbnail', 'custom-fields', 'revisions')
 		) /* end of options */
 	); /* end of register post type */
 }

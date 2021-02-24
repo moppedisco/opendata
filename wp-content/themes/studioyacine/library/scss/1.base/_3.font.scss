@@ -4,15 +4,14 @@ Author: Yacine Belarbi @ studioyacine.ch
 
 Stylesheet: Typography
 
-******************************************************************/
-/*
-some nice typographical defaults
-more here: http://www.newnet-soft.com/blog/csstypography
-*/
+*******************************************************************/
 
-$headline: "Rubik", sans-serif;
-$body: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+$regular: "m3regular", -apple-system, system-ui, BlinkMacSystemFont,
+    "Helvetica Neue", Arial;
+$light: "m3light", -apple-system, system-ui, BlinkMacSystemFont,
+    "Helvetica Neue", Arial;
+$bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
+    Arial;
 
 @mixin font($style) {
     @if $style == "thin" {
