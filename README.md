@@ -9,7 +9,7 @@ The following instructions will provide you with:
 
 You may wish to tailor this README to be specific to the site you are developing.
 
-#Setup
+#Setup#
 
 1.  Clone this repo directly into the live web directory (public_html, httpdocs, etc.) of your environment:
 
