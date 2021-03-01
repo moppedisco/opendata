@@ -17,6 +17,75 @@ const sass = require("gulp-sass");
 const globbing = require("gulp-css-globbing");
 const concat = require("gulp-concat");
 
+const sourcemaps = require("gulp-sourcemaps");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const rollup = require("@rollup/stream");
+
+// *Optional* Depends on what JS features you want vs what browsers you need to support
+// *Not needed* for basic ES6 module import syntax support
+const babel = require("@rollup/plugin-babel");
+
+// Add support for require() syntax
+const commonjs = require("@rollup/plugin-commonjs");
+
+// Add support for importing from node_modules folder like import x from 'module-name'
+const { nodeResolve } = require("@rollup/plugin-node-resolve");
+
+// Cache needs to be initialized outside of the Gulp task
+let cache;
+
+const plugins = [
+    nodeResolve({
+        mainFields: ["module"]
+    }),
+    commonjs({
+        include: "node_modules/**"
+    }),
+    babel.babel({ babelHelpers: "bundled" })
+];
+
+function lib() {
+    return (
+        rollup({
+            // Point to the entry file
+            input: "./library/js/app.js",
+
+            // Apply plugins
+            plugins: plugins,
+
+            // Use cache for better performance
+            cache: cache,
+
+            // Note: these options are placed at the root level in older versions of Rollup
+            output: {
+                // Output bundle is intended for use in browsers
+                // (iife = "Immediately Invoked Function Expression")
+                format: "iife",
+
+                // Show source code when debugging in browser
+                sourcemap: true
+            }
+        })
+            .on("bundle", function (bundle) {
+                // Update cache data after every bundle is created
+                cache = bundle;
+            })
+            // Name of the output file.
+            .pipe(source("app.js"))
+            .pipe(buffer())
+
+            // The use of sourcemaps here might not be necessary,
+            // Gulp 4 has some native sourcemap support built in
+            .pipe(sourcemaps.init({ loadMaps: true }))
+            .pipe(sourcemaps.write("."))
+
+            // Where to send the output file
+            .pipe(gulp.dest("./dist/js/"))
+            .pipe(browsersync.stream())
+    );
+}
+
 const onError = (err) => {
     console.log(err);
 };
@@ -54,7 +123,7 @@ function css() {
         .pipe(browsersync.stream());
 }
 
-// Transpile, concatenate and minify scripts
+// Transpile, concatenate and minify ,lib
 function scripts() {
     return gulp
         .src([
@@ -116,7 +185,7 @@ function images() {
 // Watch files
 function watchFiles() {
     gulp.watch("./library/scss/**/*", css);
-    gulp.watch("./library/js/**/*", gulp.series(scripts));
+    gulp.watch("./library/js/**/*", gulp.series(lib));
     gulp.watch("./library/img/**/*.{gif,jpg,png,svg}", images);
 
     gulp.watch(
@@ -132,11 +201,11 @@ function watchFiles() {
 }
 
 // define tasks
-const js = gulp.series(scripts);
+// const js = gulp.series(scripts, lib);
 const build = gulp.series(
     clean,
     gulp.parallel(fonts, wordpressAssets),
-    gulp.parallel(css, js, images)
+    gulp.parallel(css, lib, images)
 );
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
@@ -146,7 +215,7 @@ exports.fonts = fonts;
 exports.wordpressAssets = wordpressAssets;
 exports.css = css;
 exports.clean = clean;
-exports.js = js;
+exports.lib = lib;
 exports.build = build;
 exports.watch = watch;
 exports.default = build;

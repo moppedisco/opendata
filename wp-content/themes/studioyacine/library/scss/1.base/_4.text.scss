@@ -7,11 +7,11 @@ Stylesheet: Text Styles
 ******************************************************************/
 
 @mixin body-font {
-    font-family: $body;
+    font-family: $regular;
 }
 
 @mixin font-xl {
-    font-family: $headline;
+    font-family: $regular;
     @include font(medium);
     font-size: 60px;
     line-height: 60px;
@@ -24,7 +24,7 @@ Stylesheet: Text Styles
 }
 
 @mixin font-l {
-    font-family: $headline;
+    font-family: $regular;
     @include font(medium);
     letter-spacing: -0.04em;
     @include above-mobile {
@@ -34,7 +34,7 @@ Stylesheet: Text Styles
 }
 
 @mixin font-m {
-    font-family: $headline;
+    font-family: $regular;
     letter-spacing: -0.036em;
     font-size: 32px;
     line-height: 38px;
@@ -69,12 +69,12 @@ Stylesheet: Text Styles
 
 @mixin h1 {
     @include font-l;
-    font-family: $headline;
+    font-family: $regular;
     margin-bottom: 0.5ex;
 }
 
 @mixin h2 {
-    font-family: $headline;
+    font-family: $regular;
     @include font-m;
 
     // margin-top: 2em;
@@ -82,7 +82,7 @@ Stylesheet: Text Styles
 }
 
 @mixin h3 {
-    font-family: $headline;
+    font-family: $regular;
 
     // margin-top: 1.5em;
     margin-bottom: 0.5ex;

@@ -27,7 +27,7 @@ function bones_scripts_and_styles()
         // wp_register_script( 'bones-plugins', get_stylesheet_directory_uri() . '/dist/js/plugins.min.js', '', '', true );
 
         //adding scripts file in the footer
-        wp_register_script('bones-js', get_stylesheet_directory_uri() . '/dist/js/all.min.js', array('jquery'), '', true);
+        wp_register_script('bones-js', get_stylesheet_directory_uri() . '/dist/js/app.js', array('jquery'), '', true);
 
         // enqueue styles and scripts
         wp_enqueue_script('bones-modernizr');
