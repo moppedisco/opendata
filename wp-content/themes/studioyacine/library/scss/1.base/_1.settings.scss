@@ -6,7 +6,8 @@ Stylesheet: Variables
 
 ******************************************************************/
 
-$site-width: 1240px;
+$site-width: 1205px;
+$site-width-small: 1090px;
 $site-columns: 12;
 
 $base-font-size: 18px;
@@ -14,9 +15,18 @@ $base-line-height: 26px;
 
 $black: #000;
 $white: #fff;
-$red: #fe412e;
-$blue: #19d2d7;
-$peach: #fbebdb;
+$red: #e61414;
 
 $link-color: $black;
 $link-hover: darken($link-color, 9%);
+
+$image-ratios: (
+    "teaserlarge": (
+        width: 720px,
+        height: 440px
+    ),
+    "teasersmall": (
+        width: 360px,
+        height: 270px
+    )
+);

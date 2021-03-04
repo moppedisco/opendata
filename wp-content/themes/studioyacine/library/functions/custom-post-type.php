@@ -136,28 +136,28 @@ function post_news()
 }
 
 // now let's add custom categories (these act like categories)
-// register_taxonomy(
-// 	'work_category',
-// 	array('work'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
-// 	array(
-// 		'hierarchical' => false,     /* if this is true, it acts like categories */
-// 		'labels' => array(
-// 			'name' => __('Work Category', 'bonestheme'), /* name of the custom taxonomy */
-// 			'singular_name' => __('Work Category', 'bonestheme'), /* single taxonomy name */
-// 			'search_items' =>  __('Search Work Categories', 'bonestheme'), /* search title for taxomony */
-// 			'all_items' => __('All Work Categories', 'bonestheme'), /* all title for taxonomies */
-// 			'parent_item' => __('Parent Work Category', 'bonestheme'), /* parent title for taxonomy */
-// 			'parent_item_colon' => __('Parent Work Category:', 'bonestheme'), /* parent taxonomy title */
-// 			'edit_item' => __('Edit Work Category', 'bonestheme'), /* edit custom taxonomy title */
-// 			'update_item' => __('Update Work Category', 'bonestheme'), /* update title for taxonomy */
-// 			'add_new_item' => __('Add New Work Category', 'bonestheme'), /* add new title for taxonomy */
-// 			'new_item_name' => __('New Work Category Name', 'bonestheme') /* name title for taxonomy */
-// 		),
-// 		'show_admin_column' => true,
-// 		'show_ui' => true,
-// 		'query_var' => true
-// 	)
-// );
+register_taxonomy(
+	'news_category',
+	array('news'), /* if you change the name of register_post_type( 'custom_type', then you have to change this */
+	array(
+		'hierarchical' => false,     /* if this is true, it acts like categories */
+		'labels' => array(
+			'name' => __('Category', 'bonestheme'), /* name of the custom taxonomy */
+			'singular_name' => __('Category', 'bonestheme'), /* single taxonomy name */
+			'search_items' =>  __('Search Categories', 'bonestheme'), /* search title for taxomony */
+			'all_items' => __('All Categories', 'bonestheme'), /* all title for taxonomies */
+			'parent_item' => __('Parent Category', 'bonestheme'), /* parent title for taxonomy */
+			'parent_item_colon' => __('Parent Category:', 'bonestheme'), /* parent taxonomy title */
+			'edit_item' => __('Edit Category', 'bonestheme'), /* edit custom taxonomy title */
+			'update_item' => __('Update Category', 'bonestheme'), /* update title for taxonomy */
+			'add_new_item' => __('Add New Category', 'bonestheme'), /* add new title for taxonomy */
+			'new_item_name' => __('New Category Name', 'bonestheme') /* name title for taxonomy */
+		),
+		'show_admin_column' => true,
+		'show_ui' => true,
+		'query_var' => true
+	)
+);
 
 // adding the function to the Wordpress init
 add_action('init', 'post_project');

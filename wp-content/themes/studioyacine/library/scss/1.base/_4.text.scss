@@ -13,20 +13,13 @@ Stylesheet: Text Styles
 @mixin font-xl {
     font-family: $regular;
     @include font(medium);
-    font-size: 60px;
-    line-height: 60px;
-    letter-spacing: -0.04em;
-    text-indent: -0.04em;
-    @include above-mobile {
-        font-size: 140px;
-        line-height: 110px;
-    }
+    font-size: rem(75px);
+    line-height: rem(75px);
 }
 
 @mixin font-l {
     font-family: $regular;
     @include font(medium);
-    letter-spacing: -0.04em;
     @include above-mobile {
         font-size: 45px;
         line-height: 50px;
@@ -35,14 +28,12 @@ Stylesheet: Text Styles
 
 @mixin font-m {
     font-family: $regular;
-    letter-spacing: -0.036em;
     font-size: 32px;
     line-height: 38px;
     margin-left: -0.04em;
 }
 
 @mixin font-base {
-    // @include font(light);
     font-size: 18px;
     line-height: 24px;
 }

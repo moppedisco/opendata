@@ -43,3 +43,11 @@ $bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
+@function stripUnit($value) {
+    @return $value / ($value * 0 + 1);
+}
+
+@function rem($pxValue) {
+    @return #{stripUnit($pxValue) / stripUnit($base-font-size)}rem;
+}

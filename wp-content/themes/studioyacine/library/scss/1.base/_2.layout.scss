@@ -6,11 +6,19 @@ Stylesheet: Layout
 
 ******************************************************************/
 
-@mixin sitepadding($attribute, $include-above: true) {
-    #{$attribute}: 50px;
-
+@mixin sitepadding($attribute, $include-above: true, $small: false) {
     @if $include-above {
-        #{$attribute}: calc(50% - #{$site-width / 2});
+        @if $small {
+            #{$attribute}: calc(50% - #{$site-width-small / 2});
+        } @else {
+            #{$attribute}: calc(50% - #{$site-width / 2});
+        }
+    } @else {
+        #{$attribute}: 50px;
+    }
+
+    @include below-sitewidth {
+        #{$attribute}: 50px;
     }
 
     @include tablet-portrait {
@@ -25,9 +33,14 @@ Stylesheet: Layout
 }
 
 @mixin sitewidth {
-    @include sitepadding(margin-left);
-    @include sitepadding(margin-right);
+    @include sitepadding(margin-left, false);
+    @include sitepadding(margin-right, false);
     position: relative;
+}
+
+@mixin sitewidth-s {
+    @include sitepadding(margin-left, true, true);
+    @include sitepadding(margin-right, true, true);
 }
 
 html:before {

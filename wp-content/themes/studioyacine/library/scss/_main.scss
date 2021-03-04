@@ -11,6 +11,14 @@ Author: Yacine Belarbi @ studioyacine.ch
     }
 }
 
+#main {
+    @include sitewidth;
+}
+
+.inner-wrapper {
+    @include sitewidth-s;
+}
+
 #menu-main-navigation {
     display: none;
     @include above-tablet-portrait {

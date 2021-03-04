@@ -13,30 +13,30 @@ SETUP
 *********************/
 body:after {
   display: none;
-  content: 'desktop';
+  content: "desktop";
 }
 
 @media (max-width: 1200px) {
   body:after {
-    content: 'tablet';
+    content: "tablet";
   }
 }
 
 @media (max-width: 1050px) {
   body:after {
-    content: 'tablet-portrait';
+    content: "tablet-portrait";
   }
 }
 
 @media (max-width: 750px) {
   body:after {
-    content: 'mobile';
+    content: "mobile";
   }
 }
 
 @media (max-width: 400px) {
   body:after {
-    content: 'mobile-portrait';
+    content: "mobile-portrait";
   }
 }
 

@@ -4,6 +4,8 @@
     z-index: 1;
     background: $white;
     margin-bottom: 3rem;
+    padding-top: 1rem;
+    border-top: 8px solid $red;
 
     .Header--inner {
         @include sitewidth;

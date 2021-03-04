@@ -2,18 +2,15 @@
 
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
 
-	<header class="article-header">
+	<?php get_template_part('templates/home/intro'); ?>
 
-		<h1 class="page-title"><?php the_title(); ?></h1>
+	<div class="inner-wrapper">
 
-	</header>
+		<?php get_template_part_with_params('templates/module', 'teasers', ['id' => 'projects']); ?>
 
-	<section>
+		<?php get_template_part_with_params('templates/module', 'teasers', ['id' => 'projects']); ?>
 
-		<? // EXAMPLE USAGE ?>
-		<?php get_template_part('templates/home', 'hero'); ?>
-
-	</section>
+	</div>
 
 </main>
 

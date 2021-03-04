@@ -1,0 +1,6 @@
+.Teaser {
+}
+
+.Teaser--image {
+    @include image-ratio("teaserlarge");
+}

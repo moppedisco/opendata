@@ -1,0 +1,8 @@
+.HomeIntro {
+    @include sitepadding(margin-right, true, true);
+    margin-bottom: 3rem;
+    h2 {
+        @include font-xl;
+        margin-bottom: 0.2em;
+    }
+}
