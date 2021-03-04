@@ -1,5 +1,7 @@
 .HomeIntro {
-    @include sitepadding(margin-right, true, true);
+    @include offset;
+    // border-right: 2px solid blue;
+    // @include sitepadding(margin-right, true);
     margin-bottom: 3rem;
     h2 {
         @include font-xl;

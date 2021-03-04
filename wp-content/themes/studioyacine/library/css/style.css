@@ -628,12 +628,13 @@ Author: Yacine Belarbi @ studioyacine.ch
 }
 
 #main {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
   position: relative;
+  border: 3px solid orange;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   #main {
     margin-left: 50px;
   }
@@ -657,7 +658,7 @@ Author: Yacine Belarbi @ studioyacine.ch
   }
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   #main {
     margin-right: 50px;
   }
@@ -682,56 +683,11 @@ Author: Yacine Belarbi @ studioyacine.ch
 }
 
 .inner-wrapper {
-  margin-left: calc(50% - 545px);
-  margin-right: calc(50% - 545px);
-}
-
-@media (max-width: 1305px) {
-  .inner-wrapper {
-    margin-left: 50px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .inner-wrapper {
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .inner-wrapper {
-    margin-left: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  .inner-wrapper {
-    margin-left: 15px;
-  }
-}
-
-@media (max-width: 1305px) {
-  .inner-wrapper {
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .inner-wrapper {
-    margin-right: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .inner-wrapper {
-    margin-right: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  .inner-wrapper {
-    margin-right: 15px;
-  }
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1090px;
+  width: 100%;
+  border: 3px solid green;
 }
 
 #menu-main-navigation {
@@ -821,10 +777,10 @@ html.overlayIsOpen body {
 .Header--flyout .Header--flyout--close {
   position: absolute;
   top: 37px;
-  right: calc(50% - 602.5px);
+  right: calc(50% - 655px);
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .Header--flyout .Header--flyout--close {
     right: 50px;
   }
@@ -904,12 +860,13 @@ html.overlayIsOpen body {
 }
 
 .Footer .Footer--inner {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
   position: relative;
+  border: 3px solid orange;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .Footer .Footer--inner {
     margin-left: 50px;
   }
@@ -933,7 +890,7 @@ html.overlayIsOpen body {
   }
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .Footer .Footer--inner {
     margin-right: 50px;
   }
@@ -968,16 +925,17 @@ html.overlayIsOpen body {
 }
 
 .Header .Header--inner {
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
   position: relative;
+  border: 3px solid orange;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .Header .Header--inner {
     margin-left: 50px;
   }
@@ -1001,7 +959,7 @@ html.overlayIsOpen body {
   }
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .Header .Header--inner {
     margin-right: 50px;
   }
@@ -1088,31 +1046,13 @@ Stylesheet: Social links
 }
 
 .HomeIntro {
-  margin-right: calc(50% - 545px);
+  padding-right: calc((1310px - 1090px) / 2);
   margin-bottom: 3rem;
 }
 
-@media (max-width: 1305px) {
+@media (max-width: 1410px) {
   .HomeIntro {
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .HomeIntro {
-    margin-right: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .HomeIntro {
-    margin-right: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  .HomeIntro {
-    margin-right: 15px;
+    padding-right: 0;
   }
 }
 
