@@ -9,6 +9,7 @@ Stylesheet: Global
 html {
     width: 100%;
     font-size: $base-font-size; // uppercase PX won't be translated to rem
+    line-height: $base-line-height;
     text-size-adjust: 100%;
     background-color: $white;
 

@@ -28,18 +28,10 @@ Stylesheet: Layout
     }
 }
 
-@mixin offset {
-    padding-right: calc((#{$site-width} - #{$site-width-small}) / 2);
-    @include below-sitewidth {
-        padding-right: 0;
-    }
-}
-
 @mixin sitewidth {
     @include sitepadding(margin-left, true);
     @include sitepadding(margin-right, true);
     position: relative;
-    border: 3px solid orange;
 }
 
 @mixin sitewidth-s {
@@ -47,7 +39,6 @@ Stylesheet: Layout
     margin-right: auto;
     max-width: $site-width-small;
     width: 100%;
-    border: 3px solid green;
 }
 
 html:before {

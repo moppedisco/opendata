@@ -1,8 +1,15 @@
-.HomeIntro {
-    @include offset;
-    // border-right: 2px solid blue;
-    // @include sitepadding(margin-right, true);
+.Intro:not(.home) {
     margin-bottom: 3rem;
+    strong {
+        @include font-l;
+    }
+
+    h1 {
+        @include font-l;
+    }
+}
+
+.Intro.home {
     h2 {
         @include font-xl;
         margin-bottom: 0.2em;

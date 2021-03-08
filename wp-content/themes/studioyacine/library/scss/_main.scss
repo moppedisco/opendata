@@ -34,8 +34,6 @@ Author: Yacine Belarbi @ studioyacine.ch
     }
 
     a {
-        @include font-s;
-        @include font(bold);
-        text-transform: uppercase;
+        @include font-base;
     }
 }

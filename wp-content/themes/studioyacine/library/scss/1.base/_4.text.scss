@@ -12,14 +12,13 @@ Stylesheet: Text Styles
 
 @mixin font-xl {
     font-family: $regular;
-    @include font(medium);
-    font-size: rem(75px);
-    line-height: rem(75px);
+    font-size: rem(72px);
+    line-height: rem(80px);
+    letter-spacing: -0.02em;
 }
 
 @mixin font-l {
     font-family: $regular;
-    @include font(medium);
     @include above-mobile {
         font-size: 45px;
         line-height: 50px;

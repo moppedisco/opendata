@@ -19,7 +19,7 @@ $bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
     }
 
     @if $style == "light" {
-        font-weight: 200;
+        font-family: $light;
     }
 
     @if $style == "normal" {
@@ -31,7 +31,7 @@ $bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
     }
 
     @if $style == "bold" {
-        font-weight: 700;
+        font-family: $bold;
     }
 
     @if $style == "italic" {

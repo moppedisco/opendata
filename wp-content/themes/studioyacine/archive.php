@@ -2,52 +2,44 @@
 
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
 
-	<?php
-		the_archive_title( '<h1 class="page-title">', '</h1>' );
-		the_archive_description( '<div class="taxonomy-description">', '</div>' );
-	?>
-	
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<div class="article-header">
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class( '' ); ?>>
+		<?php get_template_part_with_params('templates/module', 'intro', ['id' => 'projects_intro']); ?>
 
-			<header class="entry-header article-header">
+	</div>
 
-				<h3 class="entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
+	<?php if (have_posts()) : ?>
 
-			</header>
+		<div class="TeaserGrid">
 
-			<section class="entry-content">
+			<?php while (have_posts()) : the_post(); ?>
 
-				<?php the_post_thumbnail( 'bones-thumb-300' ); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
-				<?php the_excerpt(); ?>
+					<?php get_template_part('templates/teaser', 'small');
+					?>
 
-			</section>
+				</article>
 
-			<footer class="article-footer">
+			<?php endwhile; ?>
 
-			</footer>
+		</div>
 
-		</article>
-
-	<?php endwhile; ?>
-
-			<?php bones_page_navi(); ?>
+		<?php bones_page_navi(); ?>
 
 	<?php else : ?>
 
-			<article id="post-not-found" class="hentry ">
-				<header class="article-header">
-					<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-				</header>
-				<section class="entry-content">
-					<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-				</section>
-				<footer class="article-footer">
-						<p><?php _e( 'This is the error message in the archive.php template.', 'bonestheme' ); ?></p>
-				</footer>
-			</article>
+		<article id="post-not-found" class="hentry ">
+			<header class="article-header">
+				<h1><?php _e('Oops, Post Not Found!', 'bonestheme'); ?></h1>
+			</header>
+			<section class="entry-content">
+				<p><?php _e('Uh Oh. Something is missing. Try double checking things.', 'bonestheme'); ?></p>
+			</section>
+			<footer class="article-footer">
+				<p><?php _e('This is the error message in the archive.php template.', 'bonestheme'); ?></p>
+			</footer>
+		</article>
 
 	<?php endif; ?>
 
