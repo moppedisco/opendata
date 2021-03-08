@@ -1,0 +1,12 @@
+.SimplePage {
+    @include sitewidth-s;
+}
+
+.SimplePage--title {
+    @include font-l;
+    margin-bottom: 1em;
+}
+
+.SimplePage--body {
+    @include richtext(all);
+}

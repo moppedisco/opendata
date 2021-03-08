@@ -10,7 +10,8 @@
 
 		<?php get_template_part_with_params('templates/module', 'teasers', ['id' => 'projects']); ?>
 
-		<?php get_template_part_with_params('templates/module', 'teasers', ['id' => 'projects']); ?>
+		<?php // get_template_part_with_params('templates/module', 'teasers', ['id' => 'news']); 
+		?>
 
 	</div>
 

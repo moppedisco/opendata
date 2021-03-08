@@ -1039,10 +1039,6 @@ Stylesheet: Social links
   grid-template-columns: 1fr 1fr;
 }
 
-.Intro:not(.home) {
-  margin-bottom: 3rem;
-}
-
 .Intro:not(.home) strong {
   font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
 }
@@ -1071,4 +1067,214 @@ Stylesheet: Social links
   line-height: 4rem;
   letter-spacing: -0.02em;
   margin-bottom: 0.2em;
+}
+
+.SimplePage {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1090px;
+  width: 100%;
+}
+
+.SimplePage--title {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 751px) {
+  .SimplePage--title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+.SimplePage--body h1 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin-bottom: 0.5ex;
+}
+
+@media (min-width: 751px) {
+  .SimplePage--body h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+.SimplePage--body h2 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 32px;
+  line-height: 38px;
+  margin-left: -0.04em;
+  margin-bottom: 1em;
+}
+
+.SimplePage--body h3 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin-bottom: 0.5ex;
+}
+
+.SimplePage--body pre {
+  padding: 20px;
+  background: #fff;
+  margin: 1em 0;
+}
+
+.SimplePage--body code {
+  background: white;
+}
+
+.SimplePage--body pre code,
+.SimplePage--body pre pre,
+.SimplePage--body code pre {
+  background: transparent;
+}
+
+.SimplePage--body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.SimplePage--body p {
+  margin-bottom: 1em;
+}
+
+.SimplePage--body p + h2 {
+  margin-top: 1em;
+}
+
+.SimplePage--body ul {
+  margin-left: -1em;
+  display: block;
+  margin: 1em 0;
+}
+
+@media (max-width: 750px) {
+  .SimplePage--body ul {
+    max-width: 80%;
+  }
+}
+
+.SimplePage--body ul > li {
+  padding-left: 2em;
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 1.5ex;
+}
+
+.SimplePage--body ul > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-weight: 500;
+  content: "\2013";
+}
+
+.SimplePage--body ol {
+  margin-left: -1em;
+  display: block;
+  display: block;
+  counter-reset: ol--counter;
+  /*html*/
+  margin: 1em 0;
+}
+
+@media (max-width: 750px) {
+  .SimplePage--body ol {
+    max-width: 80%;
+  }
+}
+
+.SimplePage--body ol > li {
+  padding-left: 2em;
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 1.5ex;
+}
+
+.SimplePage--body ol > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  font-weight: 500;
+  content: "\2013";
+}
+
+.SimplePage--body ol > li:not(.gfield) {
+  padding-left: 2em;
+  list-style-type: none;
+}
+
+.SimplePage--body ol > li:not(.gfield):before {
+  margin-left: -1.5em;
+  counter-increment: ol--counter;
+  content: counter(ol--counter) ".";
+  text-align: right;
+  width: 4ex;
+}
+
+.ie .SimplePage--body ol > li {
+  list-style: decimal inside none;
+}
+
+.SimplePage--body strong {
+  font-weight: 500;
+}
+
+.SimplePage--body em,
+.SimplePage--body i {
+  font-style: italic;
+}
+
+.SimplePage--body a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.SimplePage--body a:hover {
+  text-decoration: none;
+}
+
+.SimplePage--body a:not([class]) {
+  color: #e61414;
+}
+
+.SimplePage--body ::-moz-selection {
+  text-shadow: none;
+  background: #eee;
+}
+
+.SimplePage--body ::selection {
+  text-shadow: none;
+  background: #eee;
+}
+
+.SimplePage--body .has-label-font-size {
+  font-size: 12px;
+  line-height: 18px;
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 751px) {
+  .SimplePage--body .has-label-font-size {
+    margin-bottom: 1rem;
+  }
+}
+
+.SimplePage--body .has-large-font-size {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 751px) {
+  .SimplePage--body .has-large-font-size {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+.SimplePage--body .has-red-color {
+  color: #e61414;
 }

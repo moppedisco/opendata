@@ -1,32 +1,37 @@
 <?php get_header(); ?>
 
-<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
+<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<div class="SimplePage">
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-			<header class="article-header">
+				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
 
-				<h1 class="page-title"><?php the_title(); ?></h1>
+					<h1 class="SimplePage--title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
-			</header>
+					<div class="SimplePage--body">
 
-			<section class="entry-content">
+						<?php the_content(); ?>
 
-				<?php the_content(); ?>
+					</div>
 
-			</section> 
+				</article>
 
-			<footer class="article-footer">
+			<?php endwhile; ?>
 
-			</footer>
+		<?php else : ?>
 
-		</article>
+			<article id="post-not-found" class="hentry cf">
+				<header class="article-header">
+					<h1><?php _e('Oops, Post Not Found!', 'bonestheme'); ?></h1>
+				</header>
+			</article>
 
-	<?php endwhile; endif; ?>
+		<?php endif; ?>
+
+	</div>
 
 </main>
-
 
 <?php get_footer(); ?>

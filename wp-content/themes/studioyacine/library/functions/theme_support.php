@@ -52,29 +52,13 @@ function bones_theme_support()
 
     add_theme_support('editor-color-palette', array(
         array(
-            'name'  => __('Blue', 'bonestheme'),
-            'slug'  => 'blue',
-            'color'    => '#19D2D7',
-        ),
-        array(
-            'name'  => __('Peach', 'bonestheme'),
-            'slug'  => 'peach',
-            'color' => '#fbebdb',
-        ),
-        array(
             'name'    => __('Red', 'bonestheme'),
             'slug'    => 'red',
-            'color'    => '#FE412E',
+            'color'    => '#e61414',
         ),
     ));
 
     add_theme_support('editor-font-sizes', array(
-        array(
-            'name'      => __('Label', 'bonestheme'),
-            'shortName' => __('label', 'bonestheme'),
-            'size'      => 12,
-            'slug'      => 'label'
-        ),
         array(
             'name'      => __('Small', 'bonestheme'),
             'shortName' => __('S', 'bonestheme'),
@@ -92,12 +76,6 @@ function bones_theme_support()
             'shortName' => __('L', 'bonestheme'),
             'size'      => 40,
             'slug'      => 'large'
-        ),
-        array(
-            'name'      => __('XL', 'bonestheme'),
-            'shortName' => __('XL', 'bonestheme'),
-            'size'      => 60,
-            'slug'      => 'xl'
         )
     ));
 

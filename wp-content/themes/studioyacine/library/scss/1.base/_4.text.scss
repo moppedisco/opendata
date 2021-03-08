@@ -207,7 +207,10 @@ Stylesheet: Text Styles
 
         p {
             @include paragraph;
-            @include font-base;
+        }
+
+        p + h2 {
+            margin-top: 1em;
         }
 
         ul {
@@ -234,6 +237,10 @@ Stylesheet: Text Styles
 
     a {
         @include a;
+
+        &:not([class]) {
+            color: $red;
+        }
     }
 
     ::-moz-selection {
@@ -254,8 +261,8 @@ Stylesheet: Text Styles
         @include font-l;
     }
 
-    .has-blue-color {
-        color: $blue;
+    .has-red-color {
+        color: $red;
     }
 }
 

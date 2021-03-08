@@ -42,3 +42,11 @@ Stylesheet: Admin Stylesheet
 #adminmenu .menu-icon-event div.wp-menu-image:before {
     content: "\f145" !important;
 }
+
+#adminmenu .menu-icon-team_member div.wp-menu-image img {
+    display: none;
+}
+
+#adminmenu .menu-icon-team_member div.wp-menu-image:before {
+    content: "\f451" !important;
+}

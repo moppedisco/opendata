@@ -14,7 +14,7 @@
 	?>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-	<title><?php wp_title(''); ?></title>
+	<title><?php wp_title('-'); ?></title>
 
 	<?php // mobile meta (hooray!) 
 	?>
@@ -51,13 +51,14 @@
 	?>
 
 	<script>
-		CookieBoxConfig = {
-			cookieKey: 'studioyacine-wordpress-starter.local',
-			backgroundColor: '#333',
-			language: 'en',
-			url: '<?php // echo esc_url(get_page_link(68)); 
-					?>'
-		}
+		// CookieBoxConfig = {
+		// 	cookieKey: 'studioyacine-wordpress-starter.local',
+		// 	backgroundColor: '#333',
+		// 	language: 'en',
+		// 	url: '<?php // echo esc_url(get_page_link(68)); 
+						// 			
+						?>'
+		// }
 	</script>
 
 </head>
