@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The base configurations of the WordPress.
  *
@@ -15,37 +16,35 @@
  */
 
 // If 'wp-config-local.php' exists, use those settings
-if ( file_exists( dirname( __FILE__ ) . '/wp-config-local.php' ) ) {
-  include( dirname( __FILE__ ) . '/wp-config-local.php' );
+if (file_exists(dirname(__FILE__) . '/wp-config-local.php')) {
+  include(dirname(__FILE__) . '/wp-config-local.php');
 
-// Otherwise use the below settings (live server)
+  // Otherwise use the below settings (live server)
 } else {
 
-// ** Server Settings: ** //
+  // ** Server Settings: ** //
 
-/** The name of the database for WordPress */
-define('DB_NAME', 'dbname');
+  define('DB_NAME', 'zurikin_annegerssen');
 
-/** MySQL database username */
-define('DB_USER', 'dbuser');
+  /** MySQL database username */
+  define('DB_USER', 'zurikin_yacine');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'dbpass');
+  /** MySQL database password */
+  define('DB_PASSWORD', 'wi3sLKrj');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+  /** MySQL hostname */
+  define('DB_HOST', 'zurikin.mysql.db.internal');
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+  /** Database Charset to use in creating database tables. */
+  define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+  /** The Database Collate type. Don't change this if in doubt. */
+  define('DB_COLLATE', '');
 
-define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
-define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
-define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
-define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content');
-
+  define('WP_SITEURL', 'http://' . $_SERVER['HTTP_HOST'] . '/wordpress');
+  define('WP_HOME',    'http://' . $_SERVER['HTTP_HOST']);
+  define('WP_CONTENT_DIR', $_SERVER['DOCUMENT_ROOT'] . '/wp-content');
+  define('WP_CONTENT_URL', 'http://' . $_SERVER['HTTP_HOST'] . '/wp-content');
 } // /else
 
 /**#@+
@@ -88,8 +87,8 @@ define('WP_DEBUG', false);
 /* That's all, stop editing! Happy blogging. */
 
 /** Absolute path to the WordPress directory. */
-if ( !defined('ABSPATH') )
-    define('ABSPATH', dirname(__FILE__) . '/');
+if (!defined('ABSPATH'))
+  define('ABSPATH', dirname(__FILE__) . '/');
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
