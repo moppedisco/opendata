@@ -24,7 +24,7 @@ if (file_exists(dirname(__FILE__) . '/wp-config-local.php')) {
 
   // ** Server Settings: ** //
 
-  define('DB_NAME', 'zurikin_annegerssen');
+  define('DB_NAME', 'zurikin_opendata');
 
   /** MySQL database username */
   define('DB_USER', 'zurikin_yacine');
