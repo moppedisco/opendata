@@ -1,5 +1,7 @@
 <?php get_header(); ?>
 
+<?php get_template_part_with_params('templates/page', 'intro', ['id' => 'intro']); ?>
+
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 	<div class="SimplePage">
@@ -7,8 +9,6 @@
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
-
-					<h1 class="SimplePage--title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
 
 					<div class="SimplePage--body">
 

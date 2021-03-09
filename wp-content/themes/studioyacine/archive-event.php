@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part_with_params('templates/archive', 'intro', ['prefix' => 'projects']); ?>
+<?php get_template_part_with_params('templates/archive', 'intro', ['prefix' => 'events']); ?>
 
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
 
