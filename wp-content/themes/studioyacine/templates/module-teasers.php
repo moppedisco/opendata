@@ -16,8 +16,9 @@ $featured_posts = get_field(get_template_param('id'));
         <?php foreach ($featured_posts as $post) : ?>
 
             <li class='TeaserGrid--item'>
-                <?php get_template_part('templates/teaser', 'small');
-                ?>
+
+                <?php get_template_part('templates/teaser', 'small'); ?>
+
             </li>
 
         <?php endforeach; ?>

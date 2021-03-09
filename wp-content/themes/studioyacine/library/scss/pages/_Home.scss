@@ -1,15 +1,10 @@
-.Intro:not(.home) {
-    // margin-bottom: 3rem;
-    strong {
-        @include font-l;
+.HomeIntro {
+    @include sitewidth;
+    @include above-desktop {
+        padding-right: calc((#{$site-width} - #{$site-width-small}) / 2);
     }
+    margin-bottom: 4rem;
 
-    h1 {
-        @include font-l;
-    }
-}
-
-.Intro.home {
     h2 {
         @include font-xl;
         margin-bottom: 0.2em;

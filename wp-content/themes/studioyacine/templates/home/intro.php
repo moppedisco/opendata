@@ -6,14 +6,13 @@
 // ===================================================
 ?>
 <?php
-$intro = get_field(get_template_param('id'), 'option');
+$intro = get_field('intro_text');
 ?>
-<section class="Intro">
-    <?php if ($intro) : ?>
+
+<?php if ($intro) : ?>
+    <section class="HomeIntro">
 
         <strong><?php echo $intro; ?></strong>
 
-    <?php else : ?>
-        <h1><?php the_title(); ?></h1>
-    <?php endif; ?>
-</section>
+    </section>
+<?php endif; ?>

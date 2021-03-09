@@ -629,9 +629,8 @@ Author: Yacine Belarbi @ studioyacine.ch
 }
 
 #main {
-  margin-left: calc(50% - 655px);
-  margin-right: calc(50% - 655px);
-  position: relative;
+  margin-left: calc(50% - 545px);
+  margin-right: calc(50% - 545px);
 }
 
 @media (max-width: 1410px) {
@@ -682,11 +681,140 @@ Author: Yacine Belarbi @ studioyacine.ch
   }
 }
 
+.Intro {
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 1410px) {
+  .Intro {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .Intro {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Intro {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Intro {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .Intro {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .Intro {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Intro {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Intro {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 1383px) {
+  .Intro {
+    padding-right: calc((1310px - 1090px) / 2);
+  }
+}
+
+.Intro strong {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 751px) {
+  .Intro strong {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+.Intro h1 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 751px) {
+  .Intro h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
 .inner-wrapper {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1090px;
-  width: 100%;
+  margin-left: calc(50% - 545px);
+  margin-right: calc(50% - 545px);
+}
+
+@media (max-width: 1410px) {
+  .inner-wrapper {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .inner-wrapper {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .inner-wrapper {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inner-wrapper {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .inner-wrapper {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .inner-wrapper {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .inner-wrapper {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .inner-wrapper {
+    margin-right: 15px;
+  }
 }
 
 #menu-main-navigation {
@@ -1028,6 +1156,13 @@ Stylesheet: Social links
   object-fit: cover;
 }
 
+.Teaser--title {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 32px;
+  line-height: 38px;
+  margin-left: -0.04em;
+}
+
 .TeaserGrid {
   /* Grid Fallback */
   display: flex;
@@ -1039,41 +1174,126 @@ Stylesheet: Social links
   grid-template-columns: 1fr 1fr;
 }
 
-.Intro:not(.home) strong {
-  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+.HomeIntro {
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
+  position: relative;
+  margin-bottom: 4rem;
 }
 
-@media (min-width: 751px) {
-  .Intro:not(.home) strong {
-    font-size: 45px;
-    line-height: 50px;
+@media (max-width: 1410px) {
+  .HomeIntro {
+    margin-left: 50px;
   }
 }
 
-.Intro:not(.home) h1 {
-  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-}
-
-@media (min-width: 751px) {
-  .Intro:not(.home) h1 {
-    font-size: 45px;
-    line-height: 50px;
+@media (max-width: 1050px) {
+  .HomeIntro {
+    margin-left: 30px;
   }
 }
 
-.Intro.home h2 {
+@media (max-width: 750px) {
+  .HomeIntro {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .HomeIntro {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .HomeIntro {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .HomeIntro {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .HomeIntro {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .HomeIntro {
+    margin-right: 15px;
+  }
+}
+
+@media (min-width: 1383px) {
+  .HomeIntro {
+    padding-right: calc((1310px - 1090px) / 2);
+  }
+}
+
+.HomeIntro h2 {
   font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
   font-size: 3.6rem;
-  line-height: 4rem;
+  line-height: 3.8rem;
   letter-spacing: -0.02em;
   margin-bottom: 0.2em;
 }
 
 .SimplePage {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1090px;
-  width: 100%;
+  margin-left: calc(50% - 545px);
+  margin-right: calc(50% - 545px);
+}
+
+@media (max-width: 1410px) {
+  .SimplePage {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .SimplePage {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .SimplePage {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .SimplePage {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .SimplePage {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .SimplePage {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .SimplePage {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .SimplePage {
+    margin-right: 15px;
+  }
 }
 
 .SimplePage--title {
@@ -1157,7 +1377,7 @@ Stylesheet: Social links
 }
 
 .SimplePage--body ul > li {
-  padding-left: 2em;
+  padding-left: 1.5em;
   position: relative;
   list-style-type: none;
   margin-bottom: 1.5ex;
@@ -1187,7 +1407,7 @@ Stylesheet: Social links
 }
 
 .SimplePage--body ol > li {
-  padding-left: 2em;
+  padding-left: 1.5em;
   position: relative;
   list-style-type: none;
   margin-bottom: 1.5ex;

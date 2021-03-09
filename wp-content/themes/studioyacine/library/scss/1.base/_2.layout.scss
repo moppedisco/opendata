@@ -6,9 +6,13 @@ Stylesheet: Layout
 
 ******************************************************************/
 
-@mixin sitepadding($attribute, $include-above: true) {
+@mixin sitepadding($attribute, $include-above: true, $small: false) {
     @if $include-above {
-        #{$attribute}: calc(50% - #{$site-width / 2});
+        @if $small {
+            #{$attribute}: calc(50% - #{$site-width-small / 2});
+        } @else {
+            #{$attribute}: calc(50% - #{$site-width / 2});
+        }
     } @else {
         #{$attribute}: 50px;
     }
@@ -35,10 +39,8 @@ Stylesheet: Layout
 }
 
 @mixin sitewidth-s {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: $site-width-small;
-    width: 100%;
+    @include sitepadding(margin-left, true, true);
+    @include sitepadding(margin-right, true, true);
 }
 
 html:before {

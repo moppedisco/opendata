@@ -1,12 +1,8 @@
 <?php get_header(); ?>
 
+<?php get_template_part_with_params('templates/module', 'intro', ['id' => 'intro']); ?>
+
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
-
-	<div class="article-header">
-
-		<?php get_template_part_with_params('templates/module', 'intro', ['id' => 'projects_intro']); ?>
-
-	</div>
 
 	<?php if (have_posts()) : ?>
 
@@ -14,12 +10,7 @@
 
 			<?php while (have_posts()) : the_post(); ?>
 
-				<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?>>
-
-					<?php get_template_part('templates/teaser', 'small');
-					?>
-
-				</article>
+				<?php get_template_part('templates/teaser', 'small'); ?>
 
 			<?php endwhile; ?>
 

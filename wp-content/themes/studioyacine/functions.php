@@ -145,6 +145,26 @@ if (function_exists('acf_add_options_page')) {
   ));
 }
 
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_sub_page(array(
+    'page_title'      => 'Projects Settings', /* Use whatever title you want */
+    'parent_slug'     => 'edit.php?post_type=project', /* Change "services" to fit your situation */
+    'capability' => 'manage_options'
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title'      => 'News Settings', /* Use whatever title you want */
+    'parent_slug'     => 'edit.php?post_type=news', /* Change "services" to fit your situation */
+    'capability' => 'manage_options'
+  ));
+
+  acf_add_options_sub_page(array(
+    'page_title'      => 'Events Settings', /* Use whatever title you want */
+    'parent_slug'     => 'edit.php?post_type=event', /* Change "services" to fit your situation */
+    'capability' => 'manage_options'
+  ));
+}
+
 /*******************************************************************************
 WYSIWYG
  *******************************************************************************/
@@ -170,6 +190,15 @@ function my_toolbars($toolbars)
   // return $toolbars - IMPORTANT!
   return $toolbars;
 }
+
+// Changing excerpt more
+function new_excerpt_more($more)
+{
+  global $post;
+  remove_filter('excerpt_more', 'new_excerpt_more');
+  return '';
+}
+add_filter('excerpt_more', 'new_excerpt_more', 11);
 
 
 // Add new styles to the TinyMCE "formats" menu dropdown

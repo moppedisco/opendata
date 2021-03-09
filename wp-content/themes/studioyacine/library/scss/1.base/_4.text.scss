@@ -13,7 +13,7 @@ Stylesheet: Text Styles
 @mixin font-xl {
     font-family: $regular;
     font-size: rem(72px);
-    line-height: rem(80px);
+    line-height: rem(76px);
     letter-spacing: -0.02em;
 }
 
@@ -121,7 +121,7 @@ Stylesheet: Text Styles
     display: block;
 
     > li {
-        padding-left: 2em;
+        padding-left: 1.5em;
 
         position: relative;
         list-style-type: none;

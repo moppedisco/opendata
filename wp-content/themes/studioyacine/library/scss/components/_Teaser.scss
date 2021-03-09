@@ -4,3 +4,7 @@
 .Teaser--image {
     @include image-ratio("teaserlarge");
 }
+
+.Teaser--title {
+    @include font-m;
+}
