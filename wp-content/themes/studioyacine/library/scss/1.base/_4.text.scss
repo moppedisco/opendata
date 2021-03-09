@@ -12,29 +12,36 @@ Stylesheet: Text Styles
 
 @mixin font-xl {
     font-family: $regular;
-    font-size: rem(72px);
-    line-height: rem(76px);
+    font-size: rem(45px);
+    line-height: rem(50px);
     letter-spacing: -0.02em;
+    @include above-mobile {
+        font-size: rem(72px);
+        line-height: rem(76px);
+    }
 }
 
 @mixin font-l {
     font-family: $regular;
-    @include above-mobile {
-        font-size: 45px;
-        line-height: 50px;
-    }
+    font-size: rem(45px);
+    line-height: rem(50px);
+    letter-spacing: -0.02em;
 }
 
 @mixin font-m {
     font-family: $regular;
-    font-size: 32px;
-    line-height: 38px;
-    margin-left: -0.04em;
+    font-size: rem(32px);
+    line-height: rem(38px);
+    letter-spacing: -0.02em;
 }
 
 @mixin font-base {
-    font-size: 18px;
-    line-height: 24px;
+    font-size: calc(#{$base-font-size}* 0.8);
+    line-height: calc(#{$base-line-height}* 0.8);
+    @include above-mobile {
+        font-size: $base-font-size;
+        line-height: $base-line-height;
+    }
 }
 
 @mixin font-s {

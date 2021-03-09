@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part_with_params('templates/page', 'intro', ['id' => 'intro']); ?>
+<?php get_template_part_with_params('templates/intro', 'page', ['id' => 'intro']); ?>
 
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php get_template_part('templates/home/intro'); ?>
+<?php get_template_part('templates/intro', 'home'); ?>
 
 <main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
 

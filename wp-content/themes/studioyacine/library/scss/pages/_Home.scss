@@ -9,4 +9,8 @@
         @include font-xl;
         margin-bottom: 0.2em;
     }
+
+    p {
+        @include font-base;
+    }
 }

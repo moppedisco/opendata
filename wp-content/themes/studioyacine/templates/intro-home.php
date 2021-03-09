@@ -10,9 +10,11 @@ $intro = get_field('intro_text');
 ?>
 
 <?php if ($intro) : ?>
+
     <section class="HomeIntro">
 
-        <strong><?php echo $intro; ?></strong>
+        <?php echo $intro; ?>
 
     </section>
+
 <?php endif; ?>

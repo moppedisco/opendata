@@ -14,9 +14,10 @@
 
     </div>
 
-    <div class="Teaser--text">
 
-        <h3 class='Teaser--title'><?php the_title(); ?></h3>
+    <h3 class='Teaser--title'><?php the_title(); ?></h3>
+
+    <div class='Teaser--text'>
 
         <?php the_excerpt(); ?>
 

@@ -3,8 +3,14 @@
 
 .Teaser--image {
     @include image-ratio("teaserlarge");
+    margin-bottom: 0.5rem;
 }
 
 .Teaser--title {
     @include font-m;
+    margin-bottom: 0.5rem;
+}
+
+.Teaser--text {
+    @include font-base;
 }
