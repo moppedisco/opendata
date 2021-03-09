@@ -1,9 +1,20 @@
 .Teaser {
 }
 
+.Teaser:hover {
+    .Teaser--image {
+        transform: translateY(-4px);
+    }
+
+    .Teaser--text {
+        transform: translateY(-2px);
+    }
+}
+
 .Teaser--image {
     @include image-ratio("teaserlarge");
     margin-bottom: 0.5rem;
+    transition: 0.3s transform;
 }
 
 .Teaser--title {
@@ -12,5 +23,8 @@
 }
 
 .Teaser--text {
-    @include font-base;
+    transition: 0.3s transform;
+    p {
+        @include font-base;
+    }
 }

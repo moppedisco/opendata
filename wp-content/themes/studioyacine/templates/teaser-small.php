@@ -14,10 +14,9 @@
 
     </div>
 
-
-    <h3 class='Teaser--title'><?php the_title(); ?></h3>
-
     <div class='Teaser--text'>
+
+        <h3 class='Teaser--title'><?php the_title(); ?></h3>
 
         <?php the_excerpt(); ?>
 

@@ -1132,10 +1132,19 @@ Stylesheet: Social links
   width: 20px;
 }
 
+.Teaser:hover .Teaser--image {
+  transform: translateY(-4px);
+}
+
+.Teaser:hover .Teaser--text {
+  transform: translateY(-2px);
+}
+
 .Teaser--image {
   background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzQnPjxwYXRoIGQ9J00yIDBIMHYyaDJWMHptMiAySDJ2MmgyVjJ6Jy8+PC9zdmc+);
   position: relative;
   margin-bottom: 0.5rem;
+  transition: 0.3s transform;
 }
 
 .Teaser--image:before {
@@ -1165,12 +1174,16 @@ Stylesheet: Social links
 }
 
 .Teaser--text {
+  transition: 0.3s transform;
+}
+
+.Teaser--text p {
   font-size: calc(20px* 0.8);
   line-height: calc(30px* 0.8);
 }
 
 @media (min-width: 751px) {
-  .Teaser--text {
+  .Teaser--text p {
     font-size: 20px;
     line-height: 30px;
   }
