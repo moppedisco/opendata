@@ -27,4 +27,10 @@
     p {
         @include font-s;
     }
+
+    time {
+        @include font-xs;
+        @include font(bold);
+        color: $red;
+    }
 }

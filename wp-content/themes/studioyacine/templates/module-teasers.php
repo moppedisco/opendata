@@ -6,7 +6,8 @@
 // ===================================================
 ?>
 <?php
-$featured_posts = get_field(get_template_param('id'));
+$id = get_template_param('id');
+$featured_posts = get_field($id);
 ?>
 
 <?php if ($featured_posts) : ?>

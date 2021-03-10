@@ -12,7 +12,8 @@
 
 				<div class="TeaserGrid--item">
 
-					<?php get_template_part('templates/teaser', 'small'); ?>
+					<?php $args = array('date' => true); ?>
+					<?php get_template_part('templates/teaser', 'small', $args); ?>
 
 				</div>
 

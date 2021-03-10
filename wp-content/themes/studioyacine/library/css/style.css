@@ -50,14 +50,14 @@ Stylesheet: FONT INCLUDE
 
 @font-face {
   font-family: "m3bold";
-  src: url("../../fonts/m3bold-webfont.woff2") format("woff2"), url("../../fonts/m3bold-webfont.woff") format("woff");
+  src: url("../fonts/m3bold-webfont.woff2") format("woff2"), url("../fonts/m3bold-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "m3bold_italic";
-  src: url("../../fonts/m3boldital-webfont.woff2") format("woff2"), url("../../fonts/m3boldital-webfont.woff") format("woff");
+  src: url("../fonts/m3boldital-webfont.woff2") format("woff2"), url("../fonts/m3boldital-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -1222,6 +1222,13 @@ Stylesheet: Social links
   line-height: 1.2rem;
 }
 
+.Teaser--text time {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  color: #e61414;
+}
+
 .TeaserGrid {
   /* Grid Fallback */
   display: flex;
@@ -1231,6 +1238,10 @@ Stylesheet: Social links
   display: grid;
   grid-gap: 2rem;
   grid-template-columns: 1fr 1fr;
+}
+
+.TeaserGrid.size--3 {
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 .TeaserGrid--item {

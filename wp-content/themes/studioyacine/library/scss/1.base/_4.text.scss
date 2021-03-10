@@ -50,8 +50,8 @@ Stylesheet: Text Styles
 }
 
 @mixin font-xs {
-    font-size: 12px;
-    line-height: 18px;
+    font-size: rem(14px);
+    line-height: rem(18px);
 }
 
 @mixin text-uppercase {

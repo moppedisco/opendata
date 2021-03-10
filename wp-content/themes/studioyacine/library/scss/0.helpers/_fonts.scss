@@ -10,48 +10,42 @@ Stylesheet: FONT INCLUDE
 
 @font-face {
     font-family: "m3italic";
-    src: url("../fonts/m3regularital-webfont.woff2") format("woff2"),
-        url("../fonts/m3regularital-webfont.woff") format("woff");
+    src: url("../fonts/m3regularital-webfont.woff2") format("woff2"), url("../fonts/m3regularital-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "m3regular";
-    src: url("../fonts/m3regular-webfont.woff2") format("woff2"),
-        url("../fonts/m3regular-webfont.woff") format("woff");
+    src: url("../fonts/m3regular-webfont.woff2") format("woff2"), url("../fonts/m3regular-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "m3light_italic";
-    src: url("../fonts/m3lightital-webfont.woff2") format("woff2"),
-        url("../fonts/m3lightital-webfont.woff") format("woff");
+    src: url("../fonts/m3lightital-webfont.woff2") format("woff2"), url("../fonts/m3lightital-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "m3light";
-    src: url("../fonts/m3light-webfont.woff2") format("woff2"),
-        url("../fonts/m3light-webfont.woff") format("woff");
+    src: url("../fonts/m3light-webfont.woff2") format("woff2"), url("../fonts/m3light-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "m3bold";
-    src: url("../../fonts/m3bold-webfont.woff2") format("woff2"),
-        url("../../fonts/m3bold-webfont.woff") format("woff");
+    src: url("../fonts/m3bold-webfont.woff2") format("woff2"), url("../fonts/m3bold-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "m3bold_italic";
-    src: url("../../fonts/m3boldital-webfont.woff2") format("woff2"),
-        url("../../fonts/m3boldital-webfont.woff") format("woff");
+    src: url("../fonts/m3boldital-webfont.woff2") format("woff2"), url("../fonts/m3boldital-webfont.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
