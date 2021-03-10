@@ -25,6 +25,6 @@
 .Teaser--text {
     transition: 0.3s transform;
     p {
-        @include font-base;
+        @include font-s;
     }
 }

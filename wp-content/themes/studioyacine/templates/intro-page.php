@@ -9,8 +9,6 @@
 $id = get_template_param('id');
 if ($id) {
     $intro = get_field($id);
-} else {
-    $intro = get_field(get_template_param('id'));
 }
 ?>
 <section class="Intro">

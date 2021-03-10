@@ -6,36 +6,44 @@ Stylesheet: Typography
 
 *******************************************************************/
 
-$regular: "m3regular", -apple-system, system-ui, BlinkMacSystemFont,
-    "Helvetica Neue", Arial;
-$light: "m3light", -apple-system, system-ui, BlinkMacSystemFont,
-    "Helvetica Neue", Arial;
-$bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue",
-    Arial;
+$regular: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$regularItalic: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$light: "m3light", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$lightItalic: "m3light_italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$bold: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+$boldItalic: "m3bold_italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
 
 @mixin font($style) {
-    @if $style == "thin" {
-        font-weight: 100;
-    }
-
     @if $style == "light" {
         font-family: $light;
+
+        em,
+        i {
+            font-family: $lightItalic;
+        }
+
+        strong,
+        b {
+            font-family: $regular;
+        }
     }
 
     @if $style == "normal" {
-        font-weight: normal;
-    }
+        font-family: $regular;
 
-    @if $style == "medium" {
-        font-weight: 500;
+        em,
+        i {
+            font-family: $regularItalic;
+        }
+
+        strong,
+        b {
+            font-family: $bold;
+        }
     }
 
     @if $style == "bold" {
         font-family: $bold;
-    }
-
-    @if $style == "italic" {
-        font-style: italic;
     }
 }
 

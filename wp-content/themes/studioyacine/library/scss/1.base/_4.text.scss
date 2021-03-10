@@ -7,11 +7,11 @@ Stylesheet: Text Styles
 ******************************************************************/
 
 @mixin body-font {
-    font-family: $regular;
+    @include font(light);
 }
 
 @mixin font-xl {
-    font-family: $regular;
+    @include font(normal);
     font-size: rem(45px);
     line-height: rem(50px);
     letter-spacing: -0.02em;
@@ -22,14 +22,14 @@ Stylesheet: Text Styles
 }
 
 @mixin font-l {
-    font-family: $regular;
+    @include font(normal);
     font-size: rem(45px);
     line-height: rem(50px);
     letter-spacing: -0.02em;
 }
 
 @mixin font-m {
-    font-family: $regular;
+    @include font(normal);
     font-size: rem(32px);
     line-height: rem(38px);
     letter-spacing: -0.02em;
@@ -45,8 +45,8 @@ Stylesheet: Text Styles
 }
 
 @mixin font-s {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: rem(18px);
+    line-height: rem(24px);
 }
 
 @mixin font-xs {
@@ -66,12 +66,12 @@ Stylesheet: Text Styles
 
 @mixin h1 {
     @include font-l;
-    font-family: $regular;
+    @include font(normal);
     margin-bottom: 0.5ex;
 }
 
 @mixin h2 {
-    font-family: $regular;
+    @include font(normal);
     @include font-m;
 
     // margin-top: 2em;
@@ -79,7 +79,7 @@ Stylesheet: Text Styles
 }
 
 @mixin h3 {
-    font-family: $regular;
+    @include font(normal);
 
     // margin-top: 1.5em;
     margin-bottom: 0.5ex;
@@ -98,7 +98,7 @@ Stylesheet: Text Styles
 }
 
 @mixin strong {
-    @include font("medium");
+    @include font("normal");
 }
 
 @mixin a {

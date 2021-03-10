@@ -9,7 +9,7 @@ Stylesheet: Button Styles
 @mixin button {
     display: inline-block;
     position: relative;
-    font-family: $sans-serif-bold;
+    @include font(normal);
     text-decoration: none;
     color: $black;
     font-weight: normal;
