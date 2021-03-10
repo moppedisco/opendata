@@ -644,55 +644,55 @@ Author: Yacine Belarbi @ studioyacine.ch
   }
 }
 
-#main {
+.main {
   margin-left: calc(50% - 545px);
   margin-right: calc(50% - 545px);
 }
 
 @media (max-width: 1410px) {
-  #main {
+  .main {
     margin-left: 50px;
   }
 }
 
 @media (max-width: 1050px) {
-  #main {
+  .main {
     margin-left: 30px;
   }
 }
 
 @media (max-width: 750px) {
-  #main {
+  .main {
     margin-left: 25px;
   }
 }
 
 @media (max-width: 400px) {
-  #main {
+  .main {
     margin-left: 15px;
   }
 }
 
 @media (max-width: 1410px) {
-  #main {
+  .main {
     margin-right: 50px;
   }
 }
 
 @media (max-width: 1050px) {
-  #main {
+  .main {
     margin-right: 30px;
   }
 }
 
 @media (max-width: 750px) {
-  #main {
+  .main {
     margin-right: 25px;
   }
 }
 
 @media (max-width: 400px) {
-  #main {
+  .main {
     margin-right: 15px;
   }
 }

@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+<main id="" class="main" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 	<div class="SimplePage">
 

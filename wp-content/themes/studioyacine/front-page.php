@@ -2,7 +2,7 @@
 
 <?php get_template_part('templates/intro', 'home'); ?>
 
-<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
+<main id="" class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 
 	<?php get_template_part_with_params('templates/module', 'teasers', ['id' => 'projects']); ?>

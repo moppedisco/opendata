@@ -2,7 +2,7 @@
 
 <?php get_template_part_with_params('templates/intro', 'archive', ['prefix' => 'events']); ?>
 
-<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
+<main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 	<?php if (have_posts()) : ?>
 

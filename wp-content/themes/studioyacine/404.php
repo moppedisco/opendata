@@ -4,7 +4,7 @@
 
 	<div id="inner-content" class="">
 
-		<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
+		<main id="" class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 			<article id="post-not-found" class="">
 

@@ -17,47 +17,47 @@
 
 <?php get_header(); ?>
 
-<main id="main" class="" role="main" itemscope itemprop="mainContentOfPage">
+<main id="" class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
+			<article id="post-<?php the_ID(); ?>" <?php post_class(''); ?> role="article">
 
-			<header class="article-header">
+				<header class="article-header">
 
-				<h1 class="single-title"><?php the_title(); ?></h1>
+					<h1 class="single-title"><?php the_title(); ?></h1>
 
-			</header>
+				</header>
 
-			<section class="entry-content ">
-				
-				<?php the_content(); ?>
+				<section class="entry-content ">
 
-			</section> <!-- end article section -->
+					<?php the_content(); ?>
 
-			<footer class="article-footer">
+				</section> <!-- end article section -->
 
-				<p class="tags"><?php echo get_the_term_list( get_the_ID(), 'custom_tag', '<span class="tags-title">' . __( 'Custom Tags:', 'bonestheme' ) . '</span> ', ', ' ) ?></p>
-				
-			</footer>
+				<footer class="article-footer">
 
-		</article>
+					<p class="tags"><?php echo get_the_term_list(get_the_ID(), 'custom_tag', '<span class="tags-title">' . __('Custom Tags:', 'bonestheme') . '</span> ', ', ') ?></p>
 
-	<?php endwhile; ?>
+				</footer>
+
+			</article>
+
+		<?php endwhile; ?>
 
 	<?php else : ?>
 
-			<article id="post-not-found" class="hentry">
-				<header class="article-header">
-					<h1><?php _e( 'Oops, Post Not Found!', 'bonestheme' ); ?></h1>
-				</header>
-				<section class="entry-content">
-					<p><?php _e( 'Uh Oh. Something is missing. Try double checking things.', 'bonestheme' ); ?></p>
-				</section>
-				<footer class="article-footer">
-					<p><?php _e( 'This is the error message in the single-custom_type.php template.', 'bonestheme' ); ?></p>
-				</footer>
-			</article>
+		<article id="post-not-found" class="hentry">
+			<header class="article-header">
+				<h1><?php _e('Oops, Post Not Found!', 'bonestheme'); ?></h1>
+			</header>
+			<section class="entry-content">
+				<p><?php _e('Uh Oh. Something is missing. Try double checking things.', 'bonestheme'); ?></p>
+			</section>
+			<footer class="article-footer">
+				<p><?php _e('This is the error message in the single-custom_type.php template.', 'bonestheme'); ?></p>
+			</footer>
+		</article>
 
 	<?php endif; ?>
 
