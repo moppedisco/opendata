@@ -35,8 +35,18 @@ Author: Yacine Belarbi @ studioyacine.ch
     }
 }
 
-.inner-wrapper {
-    @include sitewidth-s;
+.SectionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    strong {
+        @include text-uppercase;
+    }
+
+    a {
+        @include font-s;
+    }
 }
 
 #menu-main-navigation {
