@@ -37,7 +37,7 @@
 
 .Teaser--text {
     p {
-        @include font-s;
+        @include font-base;
     }
 }
 

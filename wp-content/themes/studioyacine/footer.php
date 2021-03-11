@@ -1,11 +1,18 @@
 	<footer class="Footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 
-		<div class="Footer--inner">
+		<div class="Footer--top">
+
+			<div class="Footer--text">
+				<strong>Contact</strong>
+				<?php $text = get_field('footer_text', 'option'); ?>
+				<?php echo $text; ?>
+			</div>
 
 			<nav role="navigation">
+				<strong>Links</strong>
 				<?php wp_nav_menu(array(
 					'container' => 'div',                           // enter '' to remove nav container (just make sure .footer-links in _base.scss isn't wrapping)
-					'container_class' => 'footer-links',         // class of container (should you choose to use it)
+					'container_class' => 'Footer--links',         // class of container (should you choose to use it)
 					'menu' => __('Footer Links', 'bonestheme'),   // nav name
 					'menu_class' => 'nav footer-nav',            // adding custom nav class
 					'theme_location' => 'footer-links',             // where it's located in the theme
@@ -18,8 +25,11 @@
 				)); ?>
 			</nav>
 
-			<p class="source-org copyright">&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?>.</p>
+		</div>
 
+		<div class="Footer--bottom">
+
+			<?php the_field('legal_text', 'option'); ?>
 		</div>
 
 	</footer>

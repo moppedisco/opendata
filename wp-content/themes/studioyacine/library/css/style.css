@@ -697,101 +697,6 @@ Author: Yacine Belarbi @ studioyacine.ch
   }
 }
 
-.Intro {
-  margin-left: calc(50% - 655px);
-  margin-right: calc(50% - 655px);
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-@media (max-width: 1410px) {
-  .Intro {
-    margin-left: 50px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .Intro {
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .Intro {
-    margin-left: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  .Intro {
-    margin-left: 15px;
-  }
-}
-
-@media (max-width: 1410px) {
-  .Intro {
-    margin-right: 50px;
-  }
-}
-
-@media (max-width: 1050px) {
-  .Intro {
-    margin-right: 30px;
-  }
-}
-
-@media (max-width: 750px) {
-  .Intro {
-    margin-right: 25px;
-  }
-}
-
-@media (max-width: 400px) {
-  .Intro {
-    margin-right: 15px;
-  }
-}
-
-@media (min-width: 1383px) {
-  .Intro {
-    padding-right: calc((1310px - 1090px) / 2);
-  }
-}
-
-.Intro strong {
-  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  letter-spacing: -0.02em;
-}
-
-.Intro strong em,
-.Intro strong i {
-  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-}
-
-.Intro strong strong,
-.Intro strong b {
-  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-}
-
-.Intro h1 {
-  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  letter-spacing: -0.02em;
-}
-
-.Intro h1 em,
-.Intro h1 i {
-  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-}
-
-.Intro h1 strong,
-.Intro h1 b {
-  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-}
-
 .SectionHeader {
   display: flex;
   flex-direction: row;
@@ -833,7 +738,7 @@ Author: Yacine Belarbi @ studioyacine.ch
 }
 
 #menu-main-navigation li.current-menu-item a {
-  color: #e61414;
+  color: #ccc;
 }
 
 #menu-main-navigation a {
@@ -1010,61 +915,397 @@ html.overlayIsOpen body {
 }
 
 .Footer {
+  border-top: 1px solid #eee;
   padding: 2rem 0;
+  margin-top: 1rem;
 }
 
-.Footer .Footer--inner {
+.Footer strong {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  text-transform: uppercase;
+  display: block;
+  color: #ccc;
+  margin-bottom: 1.5rem;
+}
+
+.Footer strong em,
+.Footer strong i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer strong strong,
+.Footer strong b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--top {
   margin-left: calc(50% - 655px);
   margin-right: calc(50% - 655px);
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  /* Supports Grid */
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: 2fr 1fr 1fr;
+  margin-bottom: 3rem;
 }
 
 @media (max-width: 1410px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-left: 50px;
   }
 }
 
 @media (max-width: 1050px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-left: 30px;
   }
 }
 
 @media (max-width: 750px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-left: 25px;
   }
 }
 
 @media (max-width: 400px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-left: 15px;
   }
 }
 
 @media (max-width: 1410px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-right: 50px;
   }
 }
 
 @media (max-width: 1050px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-right: 30px;
   }
 }
 
 @media (max-width: 750px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-right: 25px;
   }
 }
 
 @media (max-width: 400px) {
-  .Footer .Footer--inner {
+  .Footer--top {
     margin-right: 15px;
   }
+}
+
+.Footer--bottom {
+  margin-left: calc(50% - 655px);
+  margin-right: calc(50% - 655px);
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  color: #ccc;
+}
+
+@media (max-width: 1410px) {
+  .Footer--bottom {
+    margin-left: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .Footer--bottom {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Footer--bottom {
+    margin-left: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Footer--bottom {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 1410px) {
+  .Footer--bottom {
+    margin-right: 50px;
+  }
+}
+
+@media (max-width: 1050px) {
+  .Footer--bottom {
+    margin-right: 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .Footer--bottom {
+    margin-right: 25px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Footer--bottom {
+    margin-right: 15px;
+  }
+}
+
+.Footer--text h1 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.9rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.02em;
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin-bottom: 0.5ex;
+}
+
+.Footer--text h1 em,
+.Footer--text h1 i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h1 strong,
+.Footer--text h1 b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h1 em,
+.Footer--text h1 i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h1 strong,
+.Footer--text h1 b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h2 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  margin-bottom: 1em;
+}
+
+.Footer--text h2 em,
+.Footer--text h2 i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h2 strong,
+.Footer--text h2 b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h2 em,
+.Footer--text h2 i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h2 strong,
+.Footer--text h2 b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h3 {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  margin-bottom: 0.5ex;
+}
+
+.Footer--text h3 em,
+.Footer--text h3 i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text h3 strong,
+.Footer--text h3 b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text pre {
+  padding: 20px;
+  background: #fff;
+  margin: 1em 0;
+}
+
+.Footer--text code {
+  background: white;
+}
+
+.Footer--text pre code,
+.Footer--text pre pre,
+.Footer--text code pre {
+  background: transparent;
+}
+
+.Footer--text table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.Footer--text p {
+  margin-bottom: 1em;
+}
+
+.Footer--text p + h2 {
+  margin-top: 1em;
+}
+
+.Footer--text ul {
+  margin-left: -1em;
+  display: block;
+  margin: 1em 0;
+}
+
+@media (max-width: 750px) {
+  .Footer--text ul {
+    max-width: 80%;
+  }
+}
+
+.Footer--text ul > li {
+  padding-left: 1.25em;
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 1.5ex;
+}
+
+.Footer--text ul > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  content: "\2013";
+}
+
+.Footer--text ol {
+  margin-left: -1em;
+  display: block;
+  display: block;
+  counter-reset: ol--counter;
+  /*html*/
+  margin: 1em 0;
+}
+
+@media (max-width: 750px) {
+  .Footer--text ol {
+    max-width: 80%;
+  }
+}
+
+.Footer--text ol > li {
+  padding-left: 1.25em;
+  position: relative;
+  list-style-type: none;
+  margin-bottom: 1.5ex;
+}
+
+.Footer--text ol > li:before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  content: "\2013";
+}
+
+.Footer--text ol > li:not(.gfield) {
+  padding-left: 1.25em;
+  list-style-type: none;
+}
+
+.Footer--text ol > li:not(.gfield):before {
+  margin-left: -1.5em;
+  counter-increment: ol--counter;
+  content: counter(ol--counter) ".";
+  text-align: right;
+  width: 4ex;
+}
+
+.ie .Footer--text ol > li {
+  list-style: decimal inside none;
+}
+
+.Footer--text strong {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text strong em,
+.Footer--text strong i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text strong strong,
+.Footer--text strong b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text a {
+  color: #000;
+  text-decoration: underline;
+}
+
+.Footer--text a:hover {
+  text-decoration: none;
+}
+
+.Footer--text a:not([class]) {
+  text-decoration: underline;
+}
+
+.Footer--text a:not([class]):hover {
+  text-decoration: none;
+}
+
+.Footer--text ::-moz-selection {
+  text-shadow: none;
+  background: #eee;
+}
+
+.Footer--text ::selection {
+  text-shadow: none;
+  background: #eee;
+}
+
+.Footer--text .has-label-font-size {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  text-transform: uppercase;
+}
+
+.Footer--text .has-label-font-size em,
+.Footer--text .has-label-font-size i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text .has-label-font-size strong,
+.Footer--text .has-label-font-size b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text .has-large-font-size {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.9rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.02em;
+}
+
+.Footer--text .has-large-font-size em,
+.Footer--text .has-large-font-size i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text .has-large-font-size strong,
+.Footer--text .has-large-font-size b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.Footer--text .has-red-color {
+  color: #e61414;
 }
 
 .Header {
@@ -1074,7 +1315,7 @@ html.overlayIsOpen body {
   background: #fff;
   margin-bottom: 5rem;
   padding-top: 1rem;
-  border-top: 8px solid #e61414;
+  border-top: 5px solid #e61414;
 }
 
 .Header .Header--inner {
@@ -1329,8 +1570,15 @@ Stylesheet: Social links
 }
 
 .Teaser--text p {
-  font-size: 0.9rem;
-  line-height: 1.2rem;
+  font-size: calc(20px* 0.8);
+  line-height: calc(30px* 0.8);
+}
+
+@media (min-width: 751px) {
+  .Teaser--text p {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .Teaser--date {
@@ -1621,7 +1869,11 @@ Stylesheet: Social links
 }
 
 .HomeIntro p a {
-  color: #e61414;
+  text-decoration: underline;
+}
+
+.HomeIntro p a:hover {
+  text-decoration: none;
 }
 
 .SimplePage {
@@ -1870,7 +2122,7 @@ Stylesheet: Social links
 }
 
 .SimplePage--body ol > li:not(.gfield) {
-  padding-left: 2em;
+  padding-left: 1.25em;
   list-style-type: none;
 }
 

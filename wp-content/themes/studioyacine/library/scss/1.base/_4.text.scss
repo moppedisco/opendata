@@ -145,7 +145,7 @@ Stylesheet: Text Styles
     counter-reset: ol--counter;
 
     > li:not(.gfield) {
-        padding-left: 2em;
+        padding-left: 1.25em;
         list-style-type: none;
 
         &:before {

@@ -1,7 +1,35 @@
 .Footer {
+    border-top: 1px solid $greyLight;
     padding: 2rem 0;
+    margin-top: 1rem;
 
-    .Footer--inner {
-        @include sitewidth;
+    strong {
+        @include text-uppercase;
+        display: block;
+        color: $grey;
+        margin-bottom: 1.5rem;
     }
+}
+
+.Footer--top {
+    @include sitewidth;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+
+    /* Supports Grid */
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-bottom: 3rem;
+}
+
+.Footer--bottom {
+    @include sitewidth;
+    @include font-s;
+    color: $grey;
+}
+
+.Footer--text {
+    @include richtext(all);
 }

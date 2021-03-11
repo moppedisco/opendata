@@ -18,23 +18,6 @@ Author: Yacine Belarbi @ studioyacine.ch
     @include sitewidth-s;
 }
 
-.Intro {
-    @include sitewidth;
-    @include above-desktop {
-        padding-right: calc((#{$site-width} - #{$site-width-small}) / 2);
-    }
-
-    margin-bottom: 2rem;
-
-    strong {
-        @include font-m;
-    }
-
-    h1 {
-        @include font-m;
-    }
-}
-
 .SectionHeader {
     display: flex;
     flex-direction: row;
@@ -60,7 +43,7 @@ Author: Yacine Belarbi @ studioyacine.ch
     }
 
     li.current-menu-item a {
-        color: $red;
+        color: $grey;
     }
 
     a {

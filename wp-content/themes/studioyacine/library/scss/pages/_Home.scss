@@ -16,7 +16,11 @@
         max-width: 1124px;
 
         a {
-            color: $red;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 }
