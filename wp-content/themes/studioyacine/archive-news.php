@@ -7,20 +7,20 @@
 
 	<?php if (have_posts()) : ?>
 
-		<div class="TeaserGrid">
-
+		<ul class="TeaserList">
+			<?php $k = 0; ?>
 			<?php while (have_posts()) : the_post(); ?>
 
-				<div class="TeaserGrid--item">
+				<li class="TeaserList--item <?php echo ($k === 0) ? 'TeaserList--item--big' : 'TeaserList--item--small' ?>">
 
 					<?php $args = array('date' => true); ?>
-					<?php get_template_part('templates/teaser', 'small', $args); ?>
-
-				</div>
+					<?php get_template_part('templates/teasers/teaser', 'news', $args); ?>
+					<?php $k++; ?>
+				</li>
 
 			<?php endwhile; ?>
 
-		</div>
+		</ul>
 
 		<?php bones_page_navi(); ?>
 

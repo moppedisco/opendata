@@ -51,7 +51,7 @@ $news = new WP_Query($args);
             <li class='TeaserGrid--item'>
 
                 <?php $args = array('date' => true); ?>
-                <?php get_template_part('templates/teaser', 'small', $args); ?>
+                <?php get_template_part('templates/teasers/teaser', 'grid', $args); ?>
 
             </li>
 

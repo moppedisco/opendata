@@ -10,10 +10,7 @@
             display: block;
             content: "";
             width: 100%;
-            padding-bottom: (
-                    get-image($format, "height") / get-image($format, "width")
-                ) *
-                100%;
+            padding-bottom: (get-image($format, "height") / get-image($format, "width")) * 100%;
         }
 
         > img {

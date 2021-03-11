@@ -1,0 +1,32 @@
+.TeaserList {
+}
+
+.TeaserNews {
+}
+
+.TeaserList--item--small .TeaserNews {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .TeaserNews--image {
+        width: 64px;
+        height: 64px;
+        background: orange;
+        margin-bottom: 0;
+        margin-right: 1rem;
+    }
+
+    .TeaserNews--date {
+        margin-left: auto;
+    }
+}
+
+.TeaserNews {
+    margin-bottom: 1rem;
+}
+
+.TeaserNews--image {
+    @include image-ratio("teaserlarge");
+    margin-bottom: 0.5rem;
+}
