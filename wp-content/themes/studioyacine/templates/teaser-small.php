@@ -16,12 +16,17 @@
     <div class='Teaser--text'>
 
         <?php if (isset($args['date'])) : ?>
-            <time class='PostDate' datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('d. F Y'); ?></time>
+            <time class='Teaser--date' datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished"><?php echo get_the_date('d. F Y'); ?></time>
         <?php endif; ?>
+
 
         <h3 class='Teaser--title'><?php the_title(); ?></h3>
 
-        <?php the_excerpt(); ?>
+        <?php if (isset($args['text']) && $args['text']) : ?>
+
+            <?php the_excerpt(); ?>
+
+        <?php endif; ?>
 
     </div>
 

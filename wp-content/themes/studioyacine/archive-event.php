@@ -1,18 +1,20 @@
 <?php get_header(); ?>
 
-<?php get_template_part_with_params('templates/intro', 'archive', ['prefix' => 'events']); ?>
+<?php $args = array('prefix' => 'event'); ?>
+<?php get_template_part('templates/intro/archive', null, $args); ?>
 
 <main id="main" class="main" role="main" itemscope itemprop="mainContentOfPage">
 
 	<?php if (have_posts()) : ?>
 
-		<div class="TeaserGrid">
+		<div class="TeaserGrid size--3">
 
 			<?php while (have_posts()) : the_post(); ?>
 
 				<div class="TeaserGrid--item">
 
-					<?php get_template_part('templates/teaser', 'small'); ?>
+					<?php $args = array('text' => false, 'date' => true); ?>
+					<?php get_template_part('templates/teaser', 'small', $args); ?>
 
 				</div>
 

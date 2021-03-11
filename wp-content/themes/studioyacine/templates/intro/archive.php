@@ -6,10 +6,10 @@
 // ===================================================
 ?>
 <?php
-$prefix = get_template_param('prefix');
-$title = get_field($prefix . '_title', 'option');
-$intro = get_field($prefix . '_intro', 'option');
+$title = get_field($args['prefix'] . '_title', 'option');
+$intro = get_field($args['prefix'] . '_intro', 'option');
 ?>
+
 <section class="Intro">
 
     <?php if ($intro) : ?>

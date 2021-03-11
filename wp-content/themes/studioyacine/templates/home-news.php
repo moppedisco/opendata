@@ -7,26 +7,49 @@
 ?>
 
 
+
+
+
+
+<?php /* =============================================  */ ?>
+<?php /* Section title  */ ?>
+<?php if (get_field('news_title')) : ?>
+
+    <div class='SectionHeader'>
+
+        <strong><?php the_field('news_title'); ?></strong>
+
+        <a href="<?php echo get_post_type_archive_link('news'); ?>">All News</a>
+
+    </div>
+
+<?php endif; ?>
+
+
+
+
+
+
+<?php /* =============================================  */ ?>
+<?php /* News list  */ ?>
 <?php
-$id = get_template_param('id');
-$posts = get_template_param('posts');
-$gridsize = (get_template_param('gridsize') ? get_template_param('gridsize') : '2');
 $args = array(
-    'post_type' => $id,
+    'post_type' => 'news',
     'order'     => 'ASC',
     'post_status' => 'publish',
-    'posts_per_page' => $posts
+    'posts_per_page' => '3'
 );
 $news = new WP_Query($args);
 ?>
 
-<ul class="TeaserGrid <?php echo 'TeaserGrid--' . $id ?> <?php echo 'size--' . $gridsize ?> ">
+<ul class="TeaserGrid size--3">
 
     <?php if ($news->have_posts()) : while ($news->have_posts()) : $news->the_post(); ?>
 
             <?php setup_postdata($post); ?>
 
             <li class='TeaserGrid--item'>
+
                 <?php $args = array('date' => true); ?>
                 <?php get_template_part('templates/teaser', 'small', $args); ?>
 

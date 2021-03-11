@@ -1,36 +1,60 @@
+.TeaserGrid {
+    /* Grid Fallback */
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+
+    /* Supports Grid */
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+
+    &.size--3 {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+.TeaserGrid--item {
+    margin-bottom: 2rem;
+}
+
 .Teaser {
 }
 
 .Teaser:hover {
-    .Teaser--image {
-        transform: translateY(-4px);
-    }
-
-    .Teaser--text {
-        transform: translateY(-2px);
-    }
+    opacity: 0.8;
 }
 
 .Teaser--image {
     @include image-ratio("teaserlarge");
     margin-bottom: 0.5rem;
-    transition: 0.3s transform;
 }
 
 .Teaser--title {
-    @include font-m;
+    @include font-l;
     margin-bottom: 0.5rem;
 }
 
 .Teaser--text {
-    transition: 0.3s transform;
     p {
         @include font-s;
     }
+}
 
-    time {
-        @include font-xs;
-        @include font(bold);
-        color: $red;
+.Teaser--date {
+    display: block;
+    @include font-xs;
+    @include font(bold);
+    color: $red;
+    margin-bottom: 0.1rem;
+}
+
+.TeaserGrid.size--3 {
+    .Teaser--image {
+        // margin-bottom: ;
+    }
+    .Teaser--title {
+        @include font-m;
+        margin-bottom: 0.25rem;
     }
 }

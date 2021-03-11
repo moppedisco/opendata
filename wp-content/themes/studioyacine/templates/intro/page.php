@@ -6,9 +6,8 @@
 // ===================================================
 ?>
 <?php
-$id = get_template_param('id');
-if ($id) {
-    $intro = get_field($id);
+if (isset($args['id'])) {
+    $intro = get_field($args['id']);
 }
 ?>
 <section class="Intro">

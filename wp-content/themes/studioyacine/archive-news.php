@@ -1,6 +1,7 @@
 <?php get_header(); ?>
 
-<?php get_template_part_with_params('templates/intro', 'archive', ['prefix' => 'news']); ?>
+<?php $args = array('prefix' => 'news'); ?>
+<?php get_template_part('templates/intro/archive', null, $args); ?>
 
 <main id="" class="main" role="main" itemscope itemprop="mainContentOfPage">
 

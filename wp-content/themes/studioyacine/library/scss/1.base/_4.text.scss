@@ -23,15 +23,15 @@ Stylesheet: Text Styles
 
 @mixin font-l {
     @include font(normal);
-    font-size: rem(45px);
-    line-height: rem(50px);
+    font-size: rem(38px);
+    line-height: rem(42px);
     letter-spacing: -0.02em;
 }
 
 @mixin font-m {
     @include font(normal);
-    font-size: rem(32px);
-    line-height: rem(38px);
+    font-size: rem(26px);
+    line-height: rem(32px);
     letter-spacing: -0.02em;
 }
 
