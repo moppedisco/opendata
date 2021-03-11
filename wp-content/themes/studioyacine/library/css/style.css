@@ -1189,7 +1189,7 @@ html.overlayIsOpen body {
   }
 }
 
-@media (min-width: 1383px) {
+@media (min-width: 1410px) {
   .Intro {
     padding-right: calc((1310px - 1090px) / 2);
   }
@@ -1227,6 +1227,12 @@ html.overlayIsOpen body {
 .Intro h1 strong,
 .Intro h1 b {
   font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 1410px) {
+  .Intro h1 {
+    padding-left: calc((1310px - 1090px) / 2);
+  }
 }
 
 /******************************************************************
@@ -1585,8 +1591,8 @@ Stylesheet: Social links
 
 @media (min-width: 751px) {
   .HomeIntro h2 {
-    font-size: 3.6rem;
-    line-height: 3.8rem;
+    font-size: 3.8rem;
+    line-height: 4rem;
   }
 }
 
@@ -1594,6 +1600,7 @@ Stylesheet: Social links
   font-size: calc(20px* 0.8);
   line-height: calc(30px* 0.8);
   font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  max-width: 1124px;
 }
 
 @media (min-width: 751px) {
@@ -1672,10 +1679,14 @@ Stylesheet: Social links
 
 .SimplePage--title {
   font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
-  font-size: 1.9rem;
-  line-height: 2.1rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
   letter-spacing: -0.02em;
   margin-bottom: 1em;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
 }
 
 .SimplePage--title em,
@@ -1686,6 +1697,19 @@ Stylesheet: Social links
 .SimplePage--title strong,
 .SimplePage--title b {
   font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 751px) {
+  .SimplePage--title {
+    font-size: 3.8rem;
+    line-height: 4rem;
+  }
+}
+
+.SimplePage--body {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .SimplePage--body h1 {
@@ -1803,7 +1827,7 @@ Stylesheet: Social links
 }
 
 .SimplePage--body ul > li {
-  padding-left: 1.5em;
+  padding-left: 1.25em;
   position: relative;
   list-style-type: none;
   margin-bottom: 1.5ex;
@@ -1832,7 +1856,7 @@ Stylesheet: Social links
 }
 
 .SimplePage--body ol > li {
-  padding-left: 1.5em;
+  padding-left: 1.25em;
   position: relative;
   list-style-type: none;
   margin-bottom: 1.5ex;
@@ -1886,7 +1910,11 @@ Stylesheet: Social links
 }
 
 .SimplePage--body a:not([class]) {
-  color: #e61414;
+  text-decoration: underline;
+}
+
+.SimplePage--body a:not([class]):hover {
+  text-decoration: none;
 }
 
 .SimplePage--body ::-moz-selection {

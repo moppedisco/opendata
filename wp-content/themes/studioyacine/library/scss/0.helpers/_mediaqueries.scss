@@ -77,6 +77,12 @@ $mq-desktop: 1382px !default;
     }
 }
 
+@mixin above-sitewidth {
+    @media (min-width: $site-width + 100px) {
+        @content;
+    }
+}
+
 // Retina screens have a 1.5 pixel ratio, not 2
 @mixin retina {
     @media only screen and (min-resolution: 144dpi) {

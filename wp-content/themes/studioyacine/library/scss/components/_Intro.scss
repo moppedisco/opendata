@@ -1,6 +1,6 @@
 .Intro {
     @include sitewidth;
-    @include above-desktop {
+    @include above-sitewidth {
         padding-right: calc((#{$site-width} - #{$site-width-small}) / 2);
     }
 
@@ -12,5 +12,8 @@
 
     h1 {
         @include font-l;
+        @include above-sitewidth {
+            padding-left: calc((#{$site-width} - #{$site-width-small}) / 2);
+        }
     }
 }

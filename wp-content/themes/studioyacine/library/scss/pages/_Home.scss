@@ -13,6 +13,7 @@
     p {
         @include font-base;
         @include font(normal);
+        max-width: 1124px;
 
         a {
             color: $red;

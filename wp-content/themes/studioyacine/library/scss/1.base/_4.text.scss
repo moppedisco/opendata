@@ -16,8 +16,8 @@ Stylesheet: Text Styles
     line-height: rem(50px);
     letter-spacing: -0.02em;
     @include above-mobile {
-        font-size: rem(72px);
-        line-height: rem(76px);
+        font-size: rem(76px);
+        line-height: rem(80px);
     }
 }
 
@@ -123,7 +123,7 @@ Stylesheet: Text Styles
     display: block;
 
     > li {
-        padding-left: 1.5em;
+        padding-left: 1.25em;
 
         position: relative;
         list-style-type: none;
@@ -241,7 +241,11 @@ Stylesheet: Text Styles
         @include a;
 
         &:not([class]) {
-            color: $red;
+            text-decoration: underline;
+
+            &:hover {
+                text-decoration: none;
+            }
         }
     }
 
