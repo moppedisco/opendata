@@ -11,7 +11,7 @@
 			<?php $k = 0; ?>
 			<?php while (have_posts()) : the_post(); ?>
 
-				<li class="TeaserList--item <?php echo ($k === 0) ? 'TeaserList--item--big' : 'TeaserList--item--small' ?>">
+				<li class="TeaserList--item <?php echo ($k === 0 && !is_paged()) ? 'TeaserList--item--big' : '' ?>">
 
 					<?php $args = array('date' => true); ?>
 					<?php get_template_part('templates/teasers/teaser', 'news', $args); ?>

@@ -1354,42 +1354,31 @@ Stylesheet: Social links
   font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
 }
 
-.TeaserList--item--small .TeaserNews {
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews {
   display: flex;
   flex-direction: row;
   align-items: center;
+  border-top: 1px solid #eee;
+  padding: 1rem 0;
 }
 
-.TeaserList--item--small .TeaserNews .TeaserNews--image {
-  width: 64px;
-  height: 64px;
-  background: orange;
-  margin-bottom: 0;
-  margin-right: 1rem;
-}
-
-.TeaserList--item--small .TeaserNews .TeaserNews--date {
-  margin-left: auto;
-}
-
-.TeaserNews {
-  margin-bottom: 1rem;
-}
-
-.TeaserNews--image {
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--image {
+  flex-basis: 64px;
   background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzQnPjxwYXRoIGQ9J00yIDBIMHYyaDJWMHptMiAySDJ2MmgyVjJ6Jy8+PC9zdmc+);
   position: relative;
-  margin-bottom: 0.5rem;
+  background: orange;
+  margin-right: 1rem;
+  margin-bottom: 0;
 }
 
-.TeaserNews--image:before {
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--image:before {
   display: block;
   content: "";
   width: 100%;
-  padding-bottom: 61.11111%;
+  padding-bottom: 100%;
 }
 
-.TeaserNews--image > img {
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--image > img {
   position: absolute;
   top: 0;
   left: 0;
@@ -1398,6 +1387,121 @@ Stylesheet: Social links
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--text {
+  width: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+@media (min-width: 751px) {
+  .TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--text {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title em,
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title strong,
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title em,
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title strong,
+.TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--title b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+@media (min-width: 751px) {
+  .TeaserList--item:not(.TeaserList--item--big) .TeaserNews .TeaserNews--date {
+    margin-left: auto;
+  }
+}
+
+.TeaserNews--date {
+  font-size: 0.7rem;
+  line-height: 0.9rem;
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  color: #e61414;
+}
+
+.TeaserList--item--big .TeaserNews {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  border: none;
+  padding: 0;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--image {
+  background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPSc0JyBoZWlnaHQ9JzQnPjxwYXRoIGQ9J00yIDBIMHYyaDJWMHptMiAySDJ2MmgyVjJ6Jy8+PC9zdmc+);
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--image:before {
+  display: block;
+  content: "";
+  width: 100%;
+  padding-bottom: 61.11111%;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--text {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--title {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.9rem;
+  line-height: 2.1rem;
+  letter-spacing: -0.02em;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--title em,
+.TeaserList--item--big .TeaserNews .TeaserNews--title i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--title strong,
+.TeaserList--item--big .TeaserNews .TeaserNews--title b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.TeaserList--item--big .TeaserNews .TeaserNews--date {
+  margin: 0;
 }
 
 .HomeIntro {
