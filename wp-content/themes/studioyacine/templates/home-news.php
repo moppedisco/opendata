@@ -51,7 +51,8 @@ $news = new WP_Query($args);
             <li class='TeaserGrid--item'>
 
                 <?php $args = array('date' => true); ?>
-                <?php get_template_part('templates/teasers/teaser', 'grid', $args); ?>
+                <?php get_template_part('templates/teasers/teaser', 'grid', $args);
+                ?>
 
             </li>
 
@@ -59,6 +60,7 @@ $news = new WP_Query($args);
 
         <?php endwhile;
     else : ?>
-</ul>
 
-<?php endif; ?>
+    <?php endif; ?>
+
+</ul>

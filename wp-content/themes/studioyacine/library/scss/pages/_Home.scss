@@ -24,3 +24,24 @@
         }
     }
 }
+
+.HomeCTA {
+    padding: 4rem 0 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+
+    /* Supports Grid */
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+    justify-content: center;
+
+    li {
+        text-align: center;
+    }
+
+    a {
+        @include font-m;
+    }
+}

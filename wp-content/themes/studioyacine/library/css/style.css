@@ -915,9 +915,8 @@ html.overlayIsOpen body {
 }
 
 .Footer {
-  border-top: 1px solid #eee;
   padding: 2rem 0;
-  margin-top: 1rem;
+  margin-top: 3rem;
 }
 
 .Footer strong {
@@ -942,13 +941,14 @@ html.overlayIsOpen body {
   margin-left: calc(50% - 655px);
   margin-right: calc(50% - 655px);
   position: relative;
+  border-top: 1px solid #eee;
   display: flex;
   flex-wrap: wrap;
-  padding-top: 1rem;
+  padding-top: 3rem;
   /* Supports Grid */
   display: grid;
   grid-gap: 2rem;
-  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-columns: 3fr 1fr 1fr 1fr;
   margin-bottom: 3rem;
 }
 
@@ -1055,6 +1055,10 @@ html.overlayIsOpen body {
   .Footer--bottom {
     margin-right: 15px;
   }
+}
+
+.Footer--text {
+  padding-right: 4rem;
 }
 
 .Footer--text h1 {
@@ -1483,14 +1487,8 @@ Author: Yacine Belarbi @ studioyacine.ch
 Stylesheet: Social links
 
 ******************************************************************/
-.SocialLinks {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .SocialLinks li + li {
-  margin-left: 0.75rem;
+  margin-top: 0.375rem;
 }
 
 .SocialLinks a {
@@ -1876,6 +1874,39 @@ Stylesheet: Social links
   text-decoration: none;
 }
 
+.HomeCTA {
+  padding: 4rem 0 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  /* Supports Grid */
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, max-content));
+  justify-content: center;
+}
+
+.HomeCTA li {
+  text-align: center;
+}
+
+.HomeCTA a {
+  font-family: "m3regular", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+  font-size: 1.3rem;
+  line-height: 1.6rem;
+  letter-spacing: -0.02em;
+}
+
+.HomeCTA a em,
+.HomeCTA a i {
+  font-family: "m3italic", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
+.HomeCTA a strong,
+.HomeCTA a b {
+  font-family: "m3bold", -apple-system, system-ui, BlinkMacSystemFont, "Helvetica Neue", Arial;
+}
+
 .SimplePage {
   margin-left: calc(50% - 545px);
   margin-right: calc(50% - 545px);
@@ -1935,10 +1966,6 @@ Stylesheet: Social links
   line-height: 2.5rem;
   letter-spacing: -0.02em;
   margin-bottom: 1em;
-  text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 940px;
 }
 
 .SimplePage--title em,
@@ -1956,12 +1983,6 @@ Stylesheet: Social links
     font-size: 3.8rem;
     line-height: 4rem;
   }
-}
-
-.SimplePage--body {
-  max-width: 880px;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .SimplePage--body h1 {
@@ -2213,4 +2234,19 @@ Stylesheet: Social links
 
 .SimplePage--body .has-red-color {
   color: #e61414;
+}
+
+.single-news .SimplePage--title,
+.single-event .SimplePage--title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 940px;
+}
+
+.single-news .SimplePage--body,
+.single-event .SimplePage--body {
+  max-width: 880px;
+  margin-left: auto;
+  margin-right: auto;
 }

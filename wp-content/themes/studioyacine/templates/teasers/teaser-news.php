@@ -7,8 +7,6 @@
 ?>
 <a class='TeaserNews' title="<?php the_title_attribute(); ?>" href='<?php the_permalink() ?>'>
 
-
-
     <div class="TeaserNews--image">
         <?php if (has_post_thumbnail()) : ?>
             <?php the_post_thumbnail('small'); ?>

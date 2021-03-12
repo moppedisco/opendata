@@ -106,7 +106,7 @@ function browserSyncReload(done) {
 
 // Clean assets
 function clean() {
-    return del(["./library/css/style.css"]);
+    return del(["./dist"]);
 }
 
 // CSS task
@@ -123,46 +123,45 @@ function css() {
         .pipe(browsersync.stream());
 }
 
-// Transpile, concatenate and minify ,lib
-function scripts() {
-    return gulp
-        .src([
-            // "./library/js/cookie-consent-box.min.js",
-            // "./library/js/vendor/chocolat.js",
-            "./library/js/scripts.js"
-        ])
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(
-            uglify({
-                mangle: false,
-                compress: {
-                    hoist_funs: false
-                }
-            })
-        )
-        .pipe(concat("all.min.js"))
-        .pipe(gulp.dest("./dist/js/"))
-        .pipe(browsersync.stream());
-}
-
 // Copy jQuery
 function wordpressAssets() {
-    return gulp
-        .src(["./library/js/vendor/jquery.min.js"])
-        .pipe(gulp.dest("./dist/js/"));
+    return gulp.src(["./library/js/vendor/jquery.min.js"]).pipe(gulp.dest("./dist/js/"));
 }
 
-// Copy Images
+// Copy Fonts
 function fonts() {
+    return gulp.src(["./library/fonts/*.{eot,ttf,woff,woff2}"]).pipe(gulp.dest("./dist/fonts/"));
+}
+
+// Optimize Icons
+function icons() {
     return gulp
-        .src(["./library/fonts/" + "*.{eot,ttf,woff,woff2}"])
-        .pipe(gulp.dest("./dist/fonts/"));
+        .src("./library/icons/**/*.svg")
+        .pipe(newer("./dist/icons/**/*"))
+        .pipe(
+            imagemin([
+                imagemin.svgo({
+                    plugins: [
+                        {
+                            removeViewBox: false,
+                            collapseGroups: true
+                        },
+                        {
+                            convertColors: {
+                                currentColor: false
+                            }
+                        }
+                    ]
+                })
+            ])
+        )
+        .pipe(gulp.dest("./dist/icons/"));
 }
 
 // Optimize Images
 function images() {
     return gulp
-        .src("./library/img/**/*.{gif,jpg,png,svg}")
+        .src(["./library/img/**/*.{gif,jpg,png,svg}", "./library/icons/**/*.{svg}"])
         .pipe(newer("./dist/img/*"))
         .pipe(
             imagemin([
@@ -187,30 +186,18 @@ function watchFiles() {
     gulp.watch("./library/scss/**/*", css);
     gulp.watch("./library/js/**/*", gulp.series(lib));
     gulp.watch("./library/img/**/*.{gif,jpg,png,svg}", images);
+    gulp.watch("./library/icons/**/*.svg", icons);
 
-    gulp.watch(
-        [
-            "./*",
-            "./blocks/**/*",
-            "./templates/**/*",
-            "./functions/*",
-            "./pages/*"
-        ],
-        gulp.series(browserSyncReload)
-    );
+    gulp.watch(["./*", "./blocks/**/*", "./templates/**/*", "./functions/*", "./pages/*"], gulp.series(browserSyncReload));
 }
 
 // define tasks
-// const js = gulp.series(scripts, lib);
-const build = gulp.series(
-    clean,
-    gulp.parallel(fonts, wordpressAssets),
-    gulp.parallel(css, lib, images)
-);
+const build = gulp.series(clean, gulp.parallel(fonts, wordpressAssets), gulp.parallel(css, lib, images, icons));
 const watch = gulp.parallel(build, watchFiles, browserSync);
 
 // export tasks
 exports.images = images;
+exports.icons = icons;
 exports.fonts = fonts;
 exports.wordpressAssets = wordpressAssets;
 exports.css = css;

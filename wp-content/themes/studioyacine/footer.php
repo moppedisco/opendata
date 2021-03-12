@@ -24,6 +24,10 @@
 					'fallback_cb' => 'bones_footer_links_fallback'  // fallback function
 				)); ?>
 			</nav>
+			<div>
+				<strong>Social</strong>
+				<?php get_template_part('templates/global', 'sociallinks'); ?>
+			</div>
 
 		</div>
 
